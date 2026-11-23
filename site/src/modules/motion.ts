@@ -14,7 +14,7 @@ export function initScroll() {
   if (reduced) return;
   scrollTo(0, 0); // every load starts at the top, so the loader → hero sequence always plays
   ScrollTrigger.config({ ignoreMobileResize: true });
-  lenis = new Lenis({ lerp: 0.075, wheelMultiplier: 0.85, touchMultiplier: 1.4, smoothWheel: true });
+  lenis = new Lenis({ lerp: 0.075, wheelMultiplier: 1, touchMultiplier: 1.4, smoothWheel: true });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((t) => lenis!.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);

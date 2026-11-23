@@ -41,3 +41,8 @@ Pass 1 → 2 fixes: `[hidden]` overridden by `.success{display:grid}`; sofa not 
 - Global: Lenis lerp 0.075, parallax scrub 0.8, `ignoreMobileResize`.
 - Fixed in review: nav intro transform broke mobile Menu position; mobile nav row-gap made the bar 78 px tall.
 - Lighthouse: mobile 95/100/100/100, desktop 99/100/100/100; 0 console errors; reduced motion unaffected.
+
+## Pass 4 (2026-11-24): hero scroll length
+- Hero sink pin 1.2 → 0.6 viewports (mobile 0.9 → 0.5); scrub 1 → 0.6. Scroll from top to film: desktop 2.2 → 1.6 vh, mobile 1.9 → 1.5 vh (1.0 of that is the normal scroll the film needs anyway).
+- Lenis wheelMultiplier 0.85 → 1 (no artificially slowed wheel). Turntable pin 1.9 → 1.4 vh (mobile 1.4 → 1.1).
+- Verified: sink still reaches 9.0 cm, 0 console errors.

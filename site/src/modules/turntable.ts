@@ -80,7 +80,7 @@ export function initTurntable() {
 
   // The rotation is a tween on a proxy, so scrub's easing smooths the frame index itself.
   const rot = { p: 0 };
-  gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: '.turn', start: 'top top', end: () => `+=${innerHeight * (innerWidth < 800 ? 1.4 : 1.9)}`, pin: '.turn__stage', scrub: 1.2, invalidateOnRefresh: true } })
+  gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: '.turn', start: 'top top', end: () => `+=${innerHeight * (innerWidth < 800 ? 1.1 : 1.4)}`, pin: '.turn__stage', scrub: 1.2, invalidateOnRefresh: true } })
     .fromTo('.turn__canvas-wrap', { scale: 0.92 }, { scale: 1, ease: 'power2.out', duration: 0.12 }, 0)
     .to(rot, { p: 1, duration: 0.88, ease: 'power1.inOut', onUpdate: () => update(rot.p) }, 0.08)
     .to({}, { duration: 0.04 });

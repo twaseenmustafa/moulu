@@ -61,7 +61,7 @@ export function initHero() {
   const mm = gsap.matchMedia();
   mm.add({ wide: '(min-width: 901px)', narrow: '(max-width: 900px)' }, (ctx) => {
     const wide = ctx.conditions!.wide;
-    const sinkLen = wide ? 1.2 : 0.9; // viewport heights spent on the sink
+    const sinkLen = wide ? 0.6 : 0.5; // viewport heights spent on the sink: enough to read it, short enough not to stall
     const stack = 1 / sinkLen; // the film overlap lasts exactly one viewport
     const spread = wide ? [-24, -12, 0, 12, 24] : [-30, -15, 0, 15, 30];
     const o = { s: 0 };
@@ -72,7 +72,7 @@ export function initHero() {
 
     const tl = gsap.timeline({
       defaults: { ease: 'none' },
-      scrollTrigger: { trigger: '.hero', start: 'top top', end: () => `+=${innerHeight * (sinkLen + 1)}`, pin: '.hero__stage', scrub: 1, invalidateOnRefresh: true },
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: () => `+=${innerHeight * (sinkLen + 1)}`, pin: '.hero__stage', scrub: 0.6, invalidateOnRefresh: true },
     });
     // depth layers move at different speeds (L0 0.2 → L4 1.3)
     tl.to('.hero__plane', { yPercent: -6, duration: 1 }, 0)
