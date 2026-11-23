@@ -14,7 +14,7 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preload" as="image" type="image/avif" href="/media/dune-ember-1000.avif" imagesrcset="/media/dune-ember-640.avif 640w, /media/dune-ember-1000.avif 1000w, /media/dune-ember-1800.avif 1800w" imagesizes="(min-width: 900px) 66vw, 106vw" fetchpriority="high" />
-  <script>document.documentElement.classList.replace('no-js','js');if(sessionStorage.getItem('moulu-seen'))document.documentElement.classList.add('seen')</script>
+  <script>document.documentElement.classList.replace('no-js','js');if('scrollRestoration' in history)history.scrollRestoration='manual'</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Moulu Dune","brand":{"@type":"Brand","name":"Moulu"},"description":"Deep, low sofa with a measured 9 cm sink. Ember bouclé, Chalk wool or Cocoa velvet.","image":"/media/dune-ember-1800.webp","offers":{"@type":"Offer","priceCurrency":"EUR","price":"4290","availability":"https://schema.org/PreOrder"}}</script>
 </head>
 <body>
@@ -55,6 +55,7 @@
     <!-- 1 · HERO — The Sink -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__stage">
+       <div class="hero__inner">
         <div class="hero__plane" aria-hidden="true"></div>
         <h1 id="hero-title" class="sr-only">Moulu Dune, a sofa built around a 9 cm sink</h1>
         <svg class="hero__word" viewBox="0 0 557 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
@@ -82,6 +83,8 @@
           <a href="#reserve" class="link-arrow">Reserve a Dune <span aria-hidden="true">→</span></a>
         </aside>
         <p class="hero__hint mono" aria-hidden="true">Scroll to sit down</p>
+        <div class="hero__dim" aria-hidden="true"></div>
+       </div>
       </div>
     </section>
 

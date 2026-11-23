@@ -12,7 +12,9 @@ export let lenis: Lenis | null = null;
 
 export function initScroll() {
   if (reduced) return;
-  lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 0.9 });
+  scrollTo(0, 0); // every load starts at the top, so the loader → hero sequence always plays
+  ScrollTrigger.config({ ignoreMobileResize: true });
+  lenis = new Lenis({ lerp: 0.075, wheelMultiplier: 0.85, touchMultiplier: 1.4, smoothWheel: true });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((t) => lenis!.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);
@@ -49,7 +51,7 @@ export function initReveals() {
     const s = parseFloat(fig.dataset.speed || '0.1');
     const img = fig.querySelector('img')!;
     gsap.set(img, { scale: 1 + Math.abs(s) * 1.6 });
-    gsap.fromTo(img, { yPercent: -s * 50 }, { yPercent: s * 50, ease: 'none', scrollTrigger: { trigger: fig, start: 'top bottom', end: 'bottom top', scrub: true } });
+    gsap.fromTo(img, { yPercent: -s * 50 }, { yPercent: s * 50, ease: 'none', scrollTrigger: { trigger: fig, start: 'top bottom', end: 'bottom top', scrub: 0.8 } });
   });
   document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => {
     const n = +el.dataset.count!;
