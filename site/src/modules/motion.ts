@@ -128,4 +128,4 @@ export function initFilm() {
   if (!reduced) gsap.fromTo(v, { scale: 1.12 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.film', start: 'top bottom', end: 'bottom bottom', scrub: true } });
 }
 
-export { gsap, ScrollTrigger };
+export { gsap, ScrollTrigger, SplitText };

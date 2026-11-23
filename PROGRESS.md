@@ -46,3 +46,7 @@ Pass 1 → 2 fixes: `[hidden]` overridden by `.success{display:grid}`; sofa not 
 - Hero sink pin 1.2 → 0.6 viewports (mobile 0.9 → 0.5); scrub 1 → 0.6. Scroll from top to film: desktop 2.2 → 1.6 vh, mobile 1.9 → 1.5 vh (1.0 of that is the normal scroll the film needs anyway).
 - Lenis wheelMultiplier 0.85 → 1 (no artificially slowed wheel). Turntable pin 1.9 → 1.4 vh (mobile 1.4 → 1.1).
 - Verified: sink still reaches 9.0 cm, 0 console errors.
+
+## Pass 5 (2026-11-24): hero supporting UI entrances
+- Ruler: line draws 0→100%, then one calibration swing 0 → 9 → 0 cm. Lede: tag pops (back ease), lines wipe in from the left (clip-path). Card: pops from its corner with overshoot, contents stagger in. Hint: chars resolve from centre, then a looping scroll pulse.
+- All four are children of the intro timeline (start 0.5–0.95 s), so they run with the letters/sofa. Calibration yields to the scroll scene if the user scrolls early.

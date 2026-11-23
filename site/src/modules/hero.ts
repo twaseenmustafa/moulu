@@ -1,4 +1,4 @@
-import { gsap, ScrollTrigger, reduced, lenis, SINK } from './motion';
+import { gsap, ScrollTrigger, SplitText, reduced, lenis, SINK } from './motion';
 
 const q = <T extends Element = HTMLElement>(s: string) => document.querySelector<T>(s)!;
 const LATE = ['.hero__lede', '.hero__card', '.hero__ruler', '.hero__hint'];
@@ -21,7 +21,53 @@ function buildIntro() {
     .fromTo('.nav', { opacity: 0 }, { opacity: 1, duration: 0.8, ease: 'power2.out' }, 0.55)
     // never transform .nav__nav: it would become the containing block of the absolute mobile Menu button
     .fromTo(['.nav__logo', '.nav__menu', '.nav__links', '.nav > .btn'], { y: -16 }, { y: 0, duration: 1.1, stagger: 0.06, clearProps: 'transform' }, 0.55)
-    .fromTo(LATE, { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.08 }, 0.75);
+    // supporting UI enters with the hero, each with its own gesture
+    .add(rulerIn(), 0.5)
+    .add(ledeIn(), 0.6)
+    .add(cardIn(), 0.7)
+    .add(hintIn(), 0.95);
+}
+
+/** Ruler: the tick line draws top→bottom (0→100%), then calibrates once 0 → 9 → 0 cm. */
+function rulerIn() {
+  const label = q('[data-sink]');
+  const line = q('.hero__ruler i');
+  const v = { s: 0 };
+  const show = () => { if (scrollY > 2) return; // the scroll scene owns the ruler once the user scrolls
+    label.textContent = v.s.toFixed(1); line.style.setProperty('--sink', `${v.s * 12}px`); };
+  return gsap.timeline()
+    .fromTo('.hero__ruler > span', { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0)
+    .fromTo(line, { scaleY: 0, transformOrigin: '50% 0%' }, { scaleY: 1, duration: 0.9, ease: 'power3.inOut' }, 0.1)
+    .fromTo('.hero__ruler > b', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0.6)
+    .to(v, { s: 9, duration: 0.7, ease: 'power2.inOut', onUpdate: show }, 0.75)
+    .to(v, { s: 0, duration: 0.8, ease: 'power3.inOut', onUpdate: show }, 1.5);
+}
+
+/** Lede: the tag pops, then each line wipes in from the left. */
+function ledeIn() {
+  return gsap.timeline()
+    .fromTo('.hero__lede .tag', { scale: 0, opacity: 0, transformOrigin: '0% 50%' }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(2)' }, 0)
+    .fromTo('.hero__lede-l', { clipPath: 'inset(0% 100% 0% 0%)', x: -28 }, { clipPath: 'inset(0% 0% 0% 0%)', x: 0, duration: 1.1, ease: 'expo.out', stagger: 0.14 }, 0.2);
+}
+
+/** Card: pops up from its corner with a soft overshoot; its contents follow in sequence. */
+function cardIn() {
+  return gsap.timeline()
+    .fromTo('.hero__card', { opacity: 0, y: 50, scale: 0.86, transformOrigin: '100% 100%' }, { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'back.out(1.4)' }, 0)
+    .fromTo('.hero__card > *', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08 }, 0.3);
+}
+
+/** Hint: letters resolve outward from the centre, then a calm scroll pulse loops. */
+function hintIn() {
+  const split = SplitText.create('.hero__hint-t', { type: 'chars' });
+  const line = q('.hero__hint-line');
+  gsap.set(line, { scaleY: 0 });
+  const pulse = gsap.timeline({ paused: true, repeat: -1, repeatDelay: 0.4 })
+    .fromTo(line, { scaleY: 0, transformOrigin: '50% 0%' }, { scaleY: 1, duration: 0.7, ease: 'power2.inOut' })
+    .set(line, { transformOrigin: '50% 100%' })
+    .to(line, { scaleY: 0, duration: 0.7, ease: 'power2.inOut' });
+  return gsap.timeline({ onComplete: () => { pulse.play(); } })
+    .fromTo(split.chars, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: { each: 0.025, from: 'center' } }, 0);
 }
 
 /** Loader plays on every load; the hero intro starts while the loader is lifting. */

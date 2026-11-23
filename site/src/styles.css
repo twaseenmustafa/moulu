@@ -122,6 +122,9 @@ html.no-js .loader { display: none; }
 .hero__shadow { position: absolute; left: 50%; top: calc(var(--st) + var(--sw) * .393 - 44px); width: calc(var(--sw) * .9); height: 70px; transform: translateX(-50%); background: radial-gradient(50% 50% at 50% 50%, #3b111166, transparent 70%); z-index: 1; }
 .hero__lede { position: absolute; left: var(--gutter); bottom: 28px; max-width: 340px; z-index: 3; font-size: 16px; color: var(--word); transition: color .8s; }
 .hero__lede .tag { display: flex; width: max-content; margin-bottom: 12px; }
+.hero__lede-l { display: block; }
+.hero__hint { display: grid; justify-items: center; gap: 10px; }
+.hero__hint-line { display: block; width: 1px; height: 30px; background: currentColor; transform-origin: 50% 0; }
 .hero__card { position: absolute; right: var(--gutter); bottom: 24px; z-index: 3; width: 290px; padding: 18px 20px; display: grid; gap: 10px; font-size: 15px; }
 .hero__card .tag--light { background: var(--ink); border: 0; justify-self: start; }
 .hero__ruler { position: absolute; right: calc(var(--gutter) + 8px); top: calc(var(--st) + 40px); z-index: 3; display: grid; justify-items: center; gap: 8px; color: var(--word); transition: color .8s; }
