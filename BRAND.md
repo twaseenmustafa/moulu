@@ -22,7 +22,7 @@ EU, prices in EUR incl. VAT, free white-glove delivery in DE/AT/NL/BE/FR, 8–10
 ## Product line (fictional, launch 2027)
 | Product | Type | Size (W×D×H, seat h.) | Fabrics | Price |
 |---|---|---|---|---|
-| **Moulu Dune** (hero) | 3-seat sofa, low, rounded, deep seat | 238 × 104 × 68 cm, seat 40 cm | Ember bouclé · Chalk wool · Cocoa velvet | €4,290 |
+| **Moulu Dune** (hero) | deep 2½-seat sofa, low, rounded | 228 × 104 × 68 cm, seat 40 cm | Ember bouclé · Chalk wool · Cocoa velvet | €4,290 |
 | **Moulu Pebble** | lounge chair | 96 × 92 × 70 cm, seat 40 cm | same | €1,890 |
 | **Moulu Crumb** | ottoman / side seat | 72 × 72 × 38 cm | same | €690 |
 
