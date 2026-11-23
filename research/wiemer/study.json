@@ -1,0 +1,1442 @@
+{
+ "desktop": {
+  "fonts": [
+   "Arial, sans-serif",
+   "\"Neue Montreal\", Arial, sans-serif",
+   "\"Supply Mono\", Arial, sans-serif",
+   ""
+  ],
+  "scripts": [
+   "https://cloud.umami.is/script.js",
+   "https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js",
+   "https://challenges.cloudflare.com/turnstile/v0/api.js",
+   "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js",
+   "website-files.com/6a609d1c360376e59e6d379d/js/webflow.schunk.f2efb3c5440a81cf.js",
+   "website-files.com/6a609d1c360376e59e6d379d/js/webflow.schunk.9c8dfff060bf92c6.js",
+   "bsite-files.com/6a609d1c360376e59e6d379d/js/webflow.b7f93dce.865efe7e0abdf331.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/Flip.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/MotionPathPlugin.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/ScrambleTextPlugin.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollSmoother.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollToPlugin.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/TextPlugin.min.js",
+   "https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/CustomEase.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Observer.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/InertiaPlugin.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Observer.min.js",
+   "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js",
+   "https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js",
+   "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js"
+  ],
+  "vids": [
+   {
+    "src": "https://doubleplay.b-cdn.net/Wiemer/wiemer_desktop.mp4",
+    "poster": "6a609d1c360376e59e6d379d/6a8ef0cb2764a7f16bf7a48f_cover.avif",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "preload": "auto",
+    "w": 1440
+   },
+   {
+    "src": "https://doubleplay.b-cdn.net/Wiemer/wiemer_mobile.mp4",
+    "poster": "6a609d1c360376e59e6d379d/6a8ef0cb2764a7f16bf7a48f_cover.avif",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "preload": "auto",
+    "w": 0
+   }
+  ],
+  "secs": [
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "Web"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3",
+    "h": 0,
+    "txt": "Web"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "Branding"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3",
+    "h": 0,
+    "txt": "Branding"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "SEO"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3",
+    "h": 0,
+    "txt": "SEO"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "Motion "
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3",
+    "h": 0,
+    "txt": "Motion "
+   },
+   {
+    "tag": "DIV",
+    "cls": "breakpoint-section",
+    "h": 1350,
+    "txt": "Wiemer Zeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland. Der"
+   },
+   {
+    "tag": "DIV",
+    "cls": "default-section h-125",
+    "h": 1350,
+    "txt": "Wiemer Zeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland. Der"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 1350,
+    "txt": "Wiemer Zeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland. Der"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 1350,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 1350,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3 is-relative",
+    "h": 1350,
+    "txt": "Wiemer Zeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland. Der"
+   },
+   {
+    "tag": "DIV",
+    "cls": "default-section h-100",
+    "h": 0,
+    "txt": "WiemerZeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland."
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "WiemerZeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland."
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": "WiemerZeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland."
+   },
+   {
+    "tag": "DIV",
+    "cls": "default-section overflow-none",
+    "h": 1797,
+    "txt": "COMING SOON Hello there, Matthias. Ein M\u00f6belst\u00fcck, das bleibt. Der Matthias. Matthias ist "
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 594,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 594,
+    "txt": ""
+   }
+  ],
+  "trans": [
+   "transform 0.3s cubic-bezier(0.38, 0.005, 0.215, 1), background-color 0.3s cubic-bezier(0.38, 0.005, 0.215, 1)",
+   "color 0.3s",
+   "0.2s",
+   "transform 0.6s cubic-bezier(0.625, 0.05, 0, 1)",
+   "opacity 0.6s cubic-bezier(0.625, 0.05, 0, 1), transform 0.6s cubic-bezier(0.625, 0.05, 0, 1)"
+  ],
+  "h1": [
+   {
+    "t": "Wiemer",
+    "fs": "180px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "162px",
+    "ls": "-0.75px",
+    "fw": "500"
+   },
+   {
+    "t": "Ein M\u00f6belst\u00fcck, das bleibt. Der Matthias.",
+    "fs": "23.04px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "27.648px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "F\u00fcr die Warteliste eintragen",
+    "fs": "23.04px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "27.648px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "Coming 2027",
+    "fs": "57.6px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "69.12px",
+    "ls": "-0.75px",
+    "fw": "500"
+   },
+   {
+    "t": "F\u00fcr die Warteliste eintragen ",
+    "fs": "23.04px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "27.648px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "\u00dcber die Brand",
+    "fs": "23.04px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "27.648px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "Specs",
+    "fs": "129.6px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "142.56px",
+    "ls": "-1px",
+    "fw": "500"
+   }
+  ],
+  "bg": "rgb(251, 251, 251)",
+  "color": "rgb(51, 51, 51)",
+  "globals": [
+   "gsap",
+   "ScrollTrigger",
+   "Lenis",
+   "Swiper",
+   "Webflow",
+   "jQuery"
+  ],
+  "gen": "Webflow",
+  "scrollYs": [
+   444,
+   894,
+   1344,
+   1794,
+   2244,
+   2694,
+   3144,
+   3594,
+   4044,
+   4494,
+   4944,
+   5394,
+   5844,
+   6294,
+   6744,
+   7194,
+   7644,
+   8094,
+   8544,
+   8714,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716,
+   8716
+  ],
+  "height": 9616,
+  "requests": [
+   [
+    "image",
+    "60376e59e6d379d/6a609d1c360376e59e6d37fb_Still%25202025-05-08%2520121503_1.8.1-p-1080.avif",
+    "13700"
+   ],
+   [
+    "image",
+    "c360376e59e6d379d/6a609d1c360376e59e6d37f4_f1d780ab27cffd06b96373df39a73eab_logo_black.svg",
+    null
+   ],
+   [
+    "image",
+    "60376e59e6d379d/6a609d1c360376e59e6d37fc_Still%25202025-05-08%2520121503_2.7.1-p-1080.avif",
+    "8300"
+   ],
+   [
+    "image",
+    "0376e59e6d379d/6a609d1c360376e59e6d37f6_Still%25202025-05-08%2520121503_1.18.2-p-1080.avif",
+    "11908"
+   ],
+   [
+    "image",
+    "://cdn.prod.website-files.com/6a609d1c360376e59e6d379d/6a8ef0cb2764a7f16bf7a48f_cover.avif",
+    "22809"
+   ],
+   [
+    "image",
+    "e6d379d/6ab11571514ff498526f0ac4_e75d90bde2ed8ff3dcaf75e5b090ea1d_hero_desktop-p-1080.avif",
+    "71680"
+   ],
+   [
+    "image",
+    "60376e59e6d379d/6a609d1c360376e59e6d37fd_Still%25202025-05-08%2520122220_7.1.1-p-1080.avif",
+    "15784"
+   ],
+   [
+    "image",
+    "c360376e59e6d379d/6a620363dab8610ce7fb6779_a0eb5603d5ece8403af1c5ac8f6d26db_tech_plate.svg",
+    null
+   ],
+   [
+    "script",
+    "dn.prod.website-files.com/6a609d1c360376e59e6d379d/js/webflow.b7f93dce.865efe7e0abdf331.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/Flip.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/TextPlugin.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/MotionPathPlugin.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollToPlugin.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js",
+    "1219"
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollSmoother.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/ScrambleTextPlugin.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cloud.umami.is/script.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js",
+    null
+   ],
+   [
+    "script",
+    "/cdn.prod.website-files.com/6a609d1c360376e59e6d379d/js/webflow.schunk.9c8dfff060bf92c6.js",
+    null
+   ],
+   [
+    "script",
+    "/cdn.prod.website-files.com/6a609d1c360376e59e6d379d/js/webflow.schunk.f2efb3c5440a81cf.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js",
+    "4349"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js",
+    "25842"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/CustomEase.min.js",
+    "3322"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Observer.min.js",
+    "3866"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/InertiaPlugin.min.js",
+    "2945"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js",
+    "3267"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js",
+    "16248"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js",
+    "9264"
+   ],
+   [
+    "image",
+    "6e59e6d379d/6a91b591b1e9ebb133425ace_602d8479564302f21a0d83cbb832824d_Frame%202-p-800.avif",
+    "11299"
+   ],
+   [
+    "image",
+    "prod.website-files.com/6a609d1c360376e59e6d379d/6a8c09ce7bbc9bc687853b9d_plate-p-1600.avif",
+    "59714"
+   ],
+   [
+    "image",
+    "n.prod.website-files.com/6a609d1c360376e59e6d379d/6a609d1c360376e59e6d37d7_arrow-black.svg",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js",
+    "37943"
+   ],
+   [
+    "image",
+    ".prod.website-files.com/6a609d1c360376e59e6d379d/6a8c09ceab3a72ddef1963a3_base-p-1600.avif",
+    "24370"
+   ],
+   [
+    "image",
+    "od.website-files.com/6a609d1c360376e59e6d379d/6a8c09ceb142d9e8a8e70260_details-p-1600.avif",
+    "94075"
+   ],
+   [
+    "font",
+    "bsite-files.com/6a609d1c360376e59e6d379d/6a60b9acd552ebce3b79f5ef_PPSupplyMono-Regular.otf",
+    null
+   ],
+   [
+    "font",
+    "ite-files.com/6a609d1c360376e59e6d379d/6a609d1c360376e59e6d37e3_PPNeueMontreal-Regular.otf",
+    null
+   ],
+   [
+    "font",
+    "site-files.com/6a609d1c360376e59e6d379d/6a609d1c360376e59e6d37d6_PPNeueMontreal-Medium.otf",
+    null
+   ],
+   [
+    "script",
+    "https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js",
+    null
+   ],
+   [
+    "media",
+    "https://doubleplay.b-cdn.net/Wiemer/wiemer_desktop.mp4",
+    "17720689"
+   ],
+   [
+    "media",
+    "https://doubleplay.b-cdn.net/Wiemer/wiemer_mobile.mp4",
+    "10456602"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-J3PPETVR.js",
+    "363"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ADKL4AJZ.js",
+    "727"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-OF4NI3Y7.js",
+    "133"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-N2ZCN6XY.js",
+    "486"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-WIALCYDY.js",
+    "366"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-XRTLPMPO.js",
+    "257"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ZI7TAH2K.js",
+    "657"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-L4B2V5MO.js",
+    "313"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-GGDEANQW.js",
+    "184"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-VDEO3AAR.js",
+    "610"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-K46K3RI5.js",
+    "331"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-CB6LZ537.js",
+    "231"
+   ],
+   [
+    "image",
+    "c360376e59e6d379d/6a609d1c360376e59e6d37c4_85804368c96b029fc6fb4af5128b69f7_logo_white.svg",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/src-T7SM3ONB.js",
+    "28810"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/src-PAEDQGTX.js",
+    "4926"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/src-A6N4LPNU.js",
+    "402"
+   ],
+   [
+    "media",
+    "https://doubleplay.b-cdn.net/Wiemer/wiemer_mobile.mp4",
+    "36378"
+   ]
+  ]
+ },
+ "mobile": {
+  "fonts": [
+   "Arial, sans-serif",
+   "\"Neue Montreal\", Arial, sans-serif",
+   "\"Supply Mono\", Arial, sans-serif",
+   ""
+  ],
+  "scripts": [
+   "https://cloud.umami.is/script.js",
+   "https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js",
+   "https://challenges.cloudflare.com/turnstile/v0/api.js",
+   "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js",
+   "website-files.com/6a609d1c360376e59e6d379d/js/webflow.schunk.f2efb3c5440a81cf.js",
+   "website-files.com/6a609d1c360376e59e6d379d/js/webflow.schunk.9c8dfff060bf92c6.js",
+   "bsite-files.com/6a609d1c360376e59e6d379d/js/webflow.b7f93dce.865efe7e0abdf331.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/Flip.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/MotionPathPlugin.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/ScrambleTextPlugin.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollSmoother.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollToPlugin.min.js",
+   "https://cdn.prod.website-files.com/gsap/3.15.0/TextPlugin.min.js",
+   "https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/CustomEase.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Observer.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/InertiaPlugin.min.js",
+   "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Observer.min.js",
+   "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js",
+   "https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js",
+   "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js"
+  ],
+  "vids": [
+   {
+    "src": "https://doubleplay.b-cdn.net/Wiemer/wiemer_desktop.mp4",
+    "poster": "6a609d1c360376e59e6d379d/6a8ef0cb2764a7f16bf7a48f_cover.avif",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "preload": "auto",
+    "w": 0
+   },
+   {
+    "src": "https://doubleplay.b-cdn.net/Wiemer/wiemer_mobile.mp4",
+    "poster": "6a609d1c360376e59e6d379d/6a8ef0cb2764a7f16bf7a48f_cover.avif",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "preload": "auto",
+    "w": 390
+   }
+  ],
+  "secs": [
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "Web"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3",
+    "h": 0,
+    "txt": "Web"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "Branding"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3",
+    "h": 0,
+    "txt": "Branding"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "SEO"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3",
+    "h": 0,
+    "txt": "SEO"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "Motion "
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3",
+    "h": 0,
+    "txt": "Motion "
+   },
+   {
+    "tag": "DIV",
+    "cls": "breakpoint-section",
+    "h": 844,
+    "txt": "Wiemer Zeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland."
+   },
+   {
+    "tag": "DIV",
+    "cls": "default-section h-125",
+    "h": 0,
+    "txt": "WiemerZeitlose Designerm\u00f6bel aus Edelstahl undAluminium. Hergestellt in Deutschland.Der er"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 0,
+    "txt": "WiemerZeitlose Designerm\u00f6bel aus Edelstahl undAluminium. Hergestellt in Deutschland.Der er"
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 0,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-3 is-relative",
+    "h": 0,
+    "txt": "WiemerZeitlose Designerm\u00f6bel aus Edelstahl undAluminium. Hergestellt in Deutschland.Der er"
+   },
+   {
+    "tag": "DIV",
+    "cls": "default-section h-100",
+    "h": 844,
+    "txt": "Wiemer Zeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland."
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 844,
+    "txt": "Wiemer Zeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland."
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1",
+    "h": 844,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-2 is-absolute",
+    "h": 844,
+    "txt": "Wiemer Zeitlose Designerm\u00f6bel aus Edelstahl und Aluminium. Hergestellt in Deutschland."
+   },
+   {
+    "tag": "DIV",
+    "cls": "default-section overflow-none",
+    "h": 1094,
+    "txt": "COMING SOON Hello there, Matthias. Ein M\u00f6belst\u00fcck, das bleibt. Der Matthias. Matthias ist "
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-1 is-relative",
+    "h": 268,
+    "txt": ""
+   },
+   {
+    "tag": "DIV",
+    "cls": "section-layer-div",
+    "h": 268,
+    "txt": ""
+   }
+  ],
+  "trans": [
+   "transform 0.3s cubic-bezier(0.38, 0.005, 0.215, 1), background-color 0.3s cubic-bezier(0.38, 0.005, 0.215, 1)",
+   "color 0.3s",
+   "0.2s",
+   "transform 0.6s cubic-bezier(0.625, 0.05, 0, 1)",
+   "opacity 0.6s cubic-bezier(0.625, 0.05, 0, 1), transform 0.6s cubic-bezier(0.625, 0.05, 0, 1)"
+  ],
+  "h1": [
+   {
+    "t": "Wiemer",
+    "fs": "180px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "162px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "Ein M\u00f6belst\u00fcck, das bleibt. Der Matthias.",
+    "fs": "20px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "24px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "F\u00fcr die Warteliste eintragen ",
+    "fs": "20px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "24px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "Coming 2027",
+    "fs": "40px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "48px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "F\u00fcr die Warteliste eintragen",
+    "fs": "20px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "24px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "\u00dcber die Brand",
+    "fs": "20px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "24px",
+    "ls": "-0.25px",
+    "fw": "500"
+   },
+   {
+    "t": "Specs",
+    "fs": "64px",
+    "ff": "\"Neue Montreal\", Arial, sans-serif",
+    "lh": "70.4px",
+    "ls": "-0.25px",
+    "fw": "500"
+   }
+  ],
+  "bg": "rgb(251, 251, 251)",
+  "color": "rgb(51, 51, 51)",
+  "globals": [
+   "gsap",
+   "ScrollTrigger",
+   "Lenis",
+   "Swiper",
+   "Webflow",
+   "jQuery"
+  ],
+  "gen": "Webflow",
+  "scrollYs": [
+   416,
+   838,
+   1260,
+   1682,
+   2104,
+   2526,
+   2948,
+   3370,
+   3792,
+   4214,
+   4636,
+   5058,
+   5480,
+   5902,
+   6324,
+   6513,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516,
+   6516
+  ],
+  "height": 7360,
+  "requests": [
+   [
+    "image",
+    "c360376e59e6d379d/6a609d1c360376e59e6d37f4_f1d780ab27cffd06b96373df39a73eab_logo_black.svg",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js",
+    "1219"
+   ],
+   [
+    "image",
+    "c360376e59e6d379d/6a620363dab8610ce7fb6779_a0eb5603d5ece8403af1c5ac8f6d26db_tech_plate.svg",
+    null
+   ],
+   [
+    "image",
+    "://cdn.prod.website-files.com/6a609d1c360376e59e6d379d/6a8ef0cb2764a7f16bf7a48f_cover.avif",
+    "22809"
+   ],
+   [
+    "script",
+    "dn.prod.website-files.com/6a609d1c360376e59e6d379d/js/webflow.b7f93dce.865efe7e0abdf331.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/ScrambleTextPlugin.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollToPlugin.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/TextPlugin.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cloud.umami.is/script.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollSmoother.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/Flip.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/MotionPathPlugin.min.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js",
+    null
+   ],
+   [
+    "script",
+    "/cdn.prod.website-files.com/6a609d1c360376e59e6d379d/js/webflow.schunk.9c8dfff060bf92c6.js",
+    null
+   ],
+   [
+    "image",
+    "n.prod.website-files.com/6a609d1c360376e59e6d379d/6a609d1c360376e59e6d37d7_arrow-black.svg",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js",
+    "3267"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js",
+    "4349"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/InertiaPlugin.min.js",
+    "2945"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/CustomEase.min.js",
+    "3322"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js",
+    "25842"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Observer.min.js",
+    "3866"
+   ],
+   [
+    "script",
+    "/cdn.prod.website-files.com/6a609d1c360376e59e6d379d/js/webflow.schunk.f2efb3c5440a81cf.js",
+    null
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js",
+    "9264"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js",
+    "16248"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js",
+    "37943"
+   ],
+   [
+    "font",
+    "bsite-files.com/6a609d1c360376e59e6d379d/6a60b9acd552ebce3b79f5ef_PPSupplyMono-Regular.otf",
+    null
+   ],
+   [
+    "font",
+    "ite-files.com/6a609d1c360376e59e6d379d/6a609d1c360376e59e6d37e3_PPNeueMontreal-Regular.otf",
+    null
+   ],
+   [
+    "script",
+    "https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js",
+    null
+   ],
+   [
+    "font",
+    "site-files.com/6a609d1c360376e59e6d379d/6a609d1c360376e59e6d37d6_PPNeueMontreal-Medium.otf",
+    null
+   ],
+   [
+    "script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js",
+    null
+   ],
+   [
+    "media",
+    "https://doubleplay.b-cdn.net/Wiemer/wiemer_desktop.mp4",
+    "17720689"
+   ],
+   [
+    "media",
+    "https://doubleplay.b-cdn.net/Wiemer/wiemer_mobile.mp4",
+    "10456602"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ADKL4AJZ.js",
+    "727"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-J3PPETVR.js",
+    "363"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-OF4NI3Y7.js",
+    "133"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-WIALCYDY.js",
+    "366"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-VDEO3AAR.js",
+    "610"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-XRTLPMPO.js",
+    "257"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ZI7TAH2K.js",
+    "657"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-N2ZCN6XY.js",
+    "486"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-L4B2V5MO.js",
+    "313"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-CB6LZ537.js",
+    "231"
+   ],
+   [
+    "image",
+    "360376e59e6d379d/6a609d1c360376e59e6d37fb_Still%25202025-05-08%2520121503_1.8.1-p-500.avif",
+    "4902"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-K46K3RI5.js",
+    "331"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-GGDEANQW.js",
+    "184"
+   ],
+   [
+    "image",
+    "60376e59e6d379d/6a609d1c360376e59e6d37f6_Still%25202025-05-08%2520121503_1.18.2-p-500.avif",
+    "4456"
+   ],
+   [
+    "image",
+    "9e6d379d/6ab11571514ff498526f0ac4_e75d90bde2ed8ff3dcaf75e5b090ea1d_hero_desktop-p-500.avif",
+    "21677"
+   ],
+   [
+    "media",
+    "https://doubleplay.b-cdn.net/Wiemer/wiemer_mobile.mp4",
+    "36378"
+   ],
+   [
+    "image",
+    "360376e59e6d379d/6a609d1c360376e59e6d37fc_Still%25202025-05-08%2520121503_2.7.1-p-500.avif",
+    "3062"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/src-PAEDQGTX.js",
+    "4926"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/src-A6N4LPNU.js",
+    "402"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/src-T7SM3ONB.js",
+    "28810"
+   ],
+   [
+    "media",
+    "https://doubleplay.b-cdn.net/Wiemer/wiemer_mobile.mp4",
+    "9866778"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-UAA7M346.js",
+    "567"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-T2PNG2TC.js",
+    "318"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-7CAOOJVW.js",
+    "204"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-WL5KIXHF.js",
+    "228"
+   ],
+   [
+    "script",
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ZZRTGM4V.js",
+    "793"
+   ]
+  ]
+ }
+}

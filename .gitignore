@@ -1,0 +1,6 @@
+node_modules/
+.next/
+out/
+research/wiemer/*.png
+assets-raw/
+*.log
