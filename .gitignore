@@ -4,3 +4,4 @@ out/
 research/wiemer/*.png
 assets-raw/
 *.log
+.npm-cache/
