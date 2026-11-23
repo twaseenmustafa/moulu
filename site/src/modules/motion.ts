@@ -84,6 +84,12 @@ export function initNav() {
     last = y;
   }, { passive: true });
   nav.addEventListener('focusin', () => nav.classList.remove('is-hidden'));
+  // Mobile menu: toggles the same link list; closes on link choice or Escape.
+  const btn = nav.querySelector<HTMLButtonElement>('.nav__menu')!;
+  const setOpen = (open: boolean) => { nav.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); btn.textContent = open ? 'Close' : 'Menu'; };
+  btn.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+  nav.querySelectorAll('.nav__links a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && nav.classList.contains('is-open')) { setOpen(false); btn.focus(); } });
 }
 
 /** Curtain page transition for links marked data-transition. */
@@ -108,7 +114,7 @@ export function initFilm() {
   const v = document.querySelector<HTMLVideoElement>('.film__video');
   if (!v) return;
   const mobile = matchMedia('(max-width: 700px)').matches;
-  if (mobile) v.poster = '/media/hero-mobile-poster.jpg';
+  v.poster = mobile ? '/media/hero-mobile-poster.jpg' : '/media/room-1600.webp';
   const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
   if (reduced || saveData) return; // poster only
   new IntersectionObserver(([en]) => {

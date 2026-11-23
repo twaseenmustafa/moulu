@@ -5,3 +5,4 @@ research/wiemer/*.png
 assets-raw/
 *.log
 .npm-cache/
+research/qa/*.png

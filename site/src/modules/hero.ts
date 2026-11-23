@@ -35,7 +35,7 @@ export function initHero() {
   gsap.set(['.hero__sofa', '.hero__shadow', '.hero__word'], { xPercent: -50, x: 0 });
   gsap.timeline({ defaults: { ease: SINK } })
     .from(letters, { yPercent: 120, opacity: 0, duration: 1.3, stagger: 0.07 })
-    .from('.hero__sofa img', { y: 80, opacity: 0, scale: 0.94, duration: 1.5 }, 0.25)
+    .from('.hero__sofa img', { y: 80, scale: 0.94, duration: 1.5 }, 0.25) // no opacity: keeps LCP early
     .from('.hero__shadow', { opacity: 0, duration: 1.5 }, 0.35)
     .from(['.hero__lede', '.hero__card', '.hero__ruler', '.hero__hint'], { y: 24, opacity: 0, duration: 1, stagger: 0.08 }, 0.6);
 

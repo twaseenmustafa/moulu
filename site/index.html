@@ -13,7 +13,7 @@
   <meta property="og:image" content="/media/og.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preload" as="image" type="image/avif" href="/media/dune-ember-1000.avif" imagesrcset="/media/dune-ember-640.avif 640w, /media/dune-ember-1000.avif 1000w, /media/dune-ember-1800.avif 1800w" imagesizes="(min-width: 900px) 62vw, 92vw" fetchpriority="high" />
+  <link rel="preload" as="image" type="image/avif" href="/media/dune-ember-1000.avif" imagesrcset="/media/dune-ember-640.avif 640w, /media/dune-ember-1000.avif 1000w, /media/dune-ember-1800.avif 1800w" imagesizes="(min-width: 900px) 66vw, 106vw" fetchpriority="high" />
   <script>document.documentElement.classList.replace('no-js','js');if(sessionStorage.getItem('moulu-seen'))document.documentElement.classList.add('seen')</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Moulu Dune","brand":{"@type":"Brand","name":"Moulu"},"description":"Deep, low sofa with a measured 9 cm sink. Ember bouclé, Chalk wool or Cocoa velvet.","image":"/media/dune-ember-1800.webp","offers":{"@type":"Offer","priceCurrency":"EUR","price":"4290","availability":"https://schema.org/PreOrder"}}</script>
 </head>
@@ -30,12 +30,14 @@
     <a href="#top" class="nav__logo" aria-label="Moulu, back to top">
       <svg viewBox="0 0 557 100" aria-hidden="true"><use href="#wordmark" /></svg>
     </a>
-    <nav aria-label="Primary">
-      <ul class="nav__links">
+    <nav aria-label="Primary" class="nav__nav">
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav__links" id="nav-links">
         <li><a href="#turn">Dune</a></li>
         <li><a href="#craft">Craft</a></li>
         <li><a href="#collection">Collection</a></li>
         <li><a href="#specs">Specs</a></li>
+        <li><a href="#faq">Questions</a></li>
       </ul>
     </nav>
     <a href="#reserve" class="btn btn--dark btn--sm" data-magnetic><span class="btn__roll" data-label="Reserve free">Reserve free</span></a>
@@ -64,8 +66,8 @@
         </svg>
         <div class="hero__shadow" aria-hidden="true"></div>
         <picture class="hero__sofa" data-fabric-img>
-          <source type="image/avif" srcset="/media/dune-ember-640.avif 640w, /media/dune-ember-1000.avif 1000w, /media/dune-ember-1800.avif 1800w" sizes="(min-width: 900px) 62vw, 92vw" />
-          <img src="/media/dune-ember-1000.webp" srcset="/media/dune-ember-640.webp 640w, /media/dune-ember-1000.webp 1000w, /media/dune-ember-1800.webp 1800w" sizes="(min-width: 900px) 62vw, 92vw" width="1937" height="761" alt="Moulu Dune sofa in Ember bouclé: low, deep, with rounded pillow arms on a walnut plinth" fetchpriority="high" decoding="async" />
+          <source type="image/avif" srcset="/media/dune-ember-640.avif 640w, /media/dune-ember-1000.avif 1000w, /media/dune-ember-1800.avif 1800w" sizes="(min-width: 900px) 66vw, 106vw" />
+          <img src="/media/dune-ember-1000.webp" srcset="/media/dune-ember-640.webp 640w, /media/dune-ember-1000.webp 1000w, /media/dune-ember-1800.webp 1800w" sizes="(min-width: 900px) 66vw, 106vw" width="1937" height="761" alt="Moulu Dune sofa in Ember bouclé: low, deep, with rounded pillow arms on a walnut plinth" fetchpriority="high" decoding="async" />
         </picture>
         <div class="hero__ruler" aria-hidden="true">
           <span class="mono">sink</span><i></i><b class="mono"><span data-sink>0.0</span> cm</b>
@@ -86,7 +88,7 @@
     <!-- 2 · MANIFESTO over film -->
     <section class="film" aria-labelledby="film-title">
       <div class="film__media" aria-hidden="true">
-        <video class="film__video" muted loop playsinline preload="none" data-src-desktop="/media/hero-desktop.mp4" data-src-mobile="/media/hero-mobile.mp4" poster="/media/room-1600.webp"></video>
+        <video class="film__video" muted loop playsinline preload="none" data-src-desktop="/media/hero-desktop.mp4" data-src-mobile="/media/hero-mobile.mp4"></video>
       </div>
       <div class="film__copy wrap">
         <h2 id="film-title" class="display reveal-lines">Built backwards<br />from nine centimetres.</h2>
@@ -110,6 +112,7 @@
             <li data-at="0.75" style="--x:44%;--y:74%"><b>Floating plinth</b><span>Oiled walnut, 4 cm shadow gap</span></li>
           </ul>
         </div>
+        <div class="dial wrap" aria-hidden="true"><i class="dial__ticks"></i><i class="dial__needle"></i><span class="mono">0°</span><span class="mono">90°</span><span class="mono">180°</span></div>
       </div>
     </section>
 
@@ -321,6 +324,19 @@
         <div class="specs__body" id="specs-panel" role="tabpanel" aria-labelledby="t-dune" tabindex="0">
           <figure class="specs__draw" data-drawing aria-label="Front elevation drawing with dimensions"></figure>
           <dl class="specs__table" data-spec-table></dl>
+        </div>
+      </div>
+    </section>
+    <!-- 10 · FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq__grid">
+        <h2 id="faq-title" class="display display--md reveal-lines">Questions,<br />answered.</h2>
+        <div class="faq__list">
+          <details><summary>What does reserving actually do?</summary><p>It holds a place in the first production run. You pay nothing now. Before we cut your fabric we email you to confirm or cancel — no answer, no order.</p></details>
+          <details><summary>Can I feel the fabric first?</summary><p>Yes. Every reservation gets a free sample of the fabric you picked, posted within two weeks. Swap fabrics as often as you like before production.</p></details>
+          <details><summary>What does “9 cm sink” mean?</summary><p>Place 75 kg in the centre of a seat cushion and measure how far the top drops: 9 cm. Enough to be held, not enough to struggle getting up. Crumb is firmer at 6 cm, because feet go on it too.</p></details>
+          <details><summary>Delivery and returns?</summary><p>Free white-glove delivery to Germany, Austria, the Netherlands, Belgium and France, carried in and unwrapped. 30-day return window from delivery. <span class="ph">(Planned terms — placeholder.)</span></p></details>
+          <details><summary>How do I clean it?</summary><p>Every cover zips off and can be dry-cleaned. Spare covers will be sold separately, so a sofa can change mood without changing sofa.</p></details>
         </div>
       </div>
     </section>

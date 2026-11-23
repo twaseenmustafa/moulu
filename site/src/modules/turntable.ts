@@ -10,6 +10,7 @@ export function initTurntable() {
   const ctx = canvas.getContext('2d')!;
   const notes = [...document.querySelectorAll<HTMLElement>('.turn__notes li')];
   const deg = document.querySelector<HTMLElement>('[data-deg]')!;
+  const dial = document.querySelector<HTMLElement>('.dial');
   const set = innerWidth < 800 ? 's' : 'l';
   const imgs: HTMLImageElement[] = [];
   let current = -1;
@@ -38,6 +39,7 @@ export function initTurntable() {
   const update = (p: number) => {
     draw(Math.round(p * (FRAMES - 1)));
     deg.textContent = String(Math.round(p * DEGREES));
+    dial?.style.setProperty('--p', p.toFixed(3));
     notes.forEach((n) => { const at = +n.dataset.at!; n.classList.toggle('is-on', p >= at && p < at + 0.26); });
   };
 
@@ -57,7 +59,7 @@ export function initTurntable() {
     return;
   }
 
-  gsap.timeline({ scrollTrigger: { trigger: '.turn', start: 'top top', end: '+=170%', pin: '.turn__stage', scrub: true, onUpdate: (st) => update(st.progress) } })
+  gsap.timeline({ scrollTrigger: { trigger: '.turn', start: 'top top', end: innerWidth < 800 ? '+=120%' : '+=170%', pin: '.turn__stage', scrub: true, onUpdate: (st) => update(st.progress) } })
     .fromTo('.turn__canvas-wrap', { scale: 0.92 }, { scale: 1, ease: 'power2.out', duration: 0.3 })
     .to({}, { duration: 0.7 });
 }

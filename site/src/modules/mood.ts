@@ -1,6 +1,6 @@
 import { FABRIC_LINES, type Fabric } from '../data';
 
-const SIZES = '(min-width: 900px) 62vw, 92vw';
+const SIZES = '(min-width: 900px) 66vw, 106vw';
 const set = (f: string, ext: string) => [640, 1000, 1800].map((w) => `/media/dune-${f}-${w}.${ext} ${w}w`).join(', ');
 
 /** One fabric choice recolours the page, swaps the sofa and syncs the form. */
