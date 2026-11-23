@@ -70,29 +70,49 @@ function hintIn() {
     .fromTo(split.chars, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: { each: 0.025, from: 'center' } }, 0);
 }
 
-/** Loader plays on every load; the hero intro starts while the loader is lifting. */
-export async function runLoader(): Promise<void> {
+const frame = () => new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
+const within = (p: Promise<unknown>, ms: number) => Promise.race([p.catch(() => {}), new Promise((r) => setTimeout(r, ms))]);
+
+/**
+ * Loader plays on every load. All heavy work is scheduled into moments where nothing moves,
+ * so no animation ever drops frames:
+ *  1. fonts settle (the font swap re-lays out the page) — before the ring starts drawing
+ *  2. ring draws while the hero image decodes and the page `load` event fires
+ *  3. `setup()` builds every scroll scene + one refresh — while the finished ring holds still
+ *  4. loader lifts and the hero intro plays on an idle main thread
+ */
+export async function runLoader(setup: () => void): Promise<void> {
   const loader = q('.loader');
-  if (reduced) { loader.remove(); return; }
+  if (reduced) { loader.remove(); setup(); return; }
   const intro = buildIntro();
   lenis?.stop();
+  await within(document.fonts.ready, 900);
+  await frame();
+
   const img = q<HTMLImageElement>('.hero__sofa img');
   const count = q('.loader__count');
   const o = { p: 0 };
+  performance.mark('loader:fill');
   const fill = gsap.timeline()
     .to('.loader__mark', { strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut' }, 0)
     .to(o, { p: 100, duration: 1.1, ease: 'power2.inOut', onUpdate: () => (count.textContent = String(Math.round(o.p)).padStart(3, '0')) }, 0);
-  await Promise.all([
-    Promise.race([img.decode().catch(() => {}), new Promise((r) => setTimeout(r, 1600))]),
-    fill.then(),
-  ]);
+  const loaded = document.readyState === 'complete' ? Promise.resolve() : new Promise((r) => addEventListener('load', r, { once: true }));
+  await Promise.all([within(img.decode(), 2000), within(loaded, 2500), fill.then()]);
+
+  performance.mark('loader:setup');
+  setup();
+  ScrollTrigger.refresh();
+  await frame(); // let the setup's layout/paint land before anything moves again
+
+  performance.mark('loader:exit');
   await new Promise<void>((done) => {
     gsap.timeline({ onComplete: done })
       .to(['.loader__mark', '.loader__count'], { yPercent: -60, opacity: 0, duration: 0.5, ease: 'power2.in' }, 0)
-      .to(loader, { yPercent: -100, duration: 1, ease: 'expo.inOut' }, 0.15)
-      .add(() => { intro.play(); }, 0.55); // hero starts moving as the loader edge passes mid-screen
+      .to(loader, { yPercent: -100, duration: 1.1, ease: 'expo.inOut' }, 0.15)
+      .add(() => { intro.play(); }, 0.6); // hero starts moving as the loader edge passes mid-screen
   });
-  loader.remove();
+  performance.mark('loader:done');
+  loader.style.display = 'none'; // hide, don't remove: no DOM mutation while the intro is still running
   lenis?.start();
 }
 

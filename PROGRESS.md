@@ -50,3 +50,8 @@ Pass 1 → 2 fixes: `[hidden]` overridden by `.success{display:grid}`; sofa not 
 ## Pass 5 (2026-11-24): hero supporting UI entrances
 - Ruler: line draws 0→100%, then one calibration swing 0 → 9 → 0 cm. Lede: tag pops (back ease), lines wipe in from the left (clip-path). Card: pops from its corner with overshoot, contents stagger in. Hint: chars resolve from centre, then a looping scroll pulse.
 - All four are children of the intro timeline (start 0.5–0.95 s), so they run with the letters/sofa. Calibration yields to the scroll scene if the user scrolls early.
+
+## Pass 6 (2026-11-24): "animation freezes midway" (user screen recording)
+- Diagnosis (recording frame-diff + Chrome long-task/LoAF traces, 1x and 4x CPU): (1) all scroll scenes + ScrollTrigger.refresh were built right after the loader lifted → 190 ms task mid-intro; (2) font swap relayout stalled the loader ring; (3) turntable frames turned into bitmaps from <img> → ~1 s main-thread hitch on first scroll.
+- Fix: loader waits for fonts before drawing; builds every scroll scene behind the finished ring (after `load`), then 2 frames, then lifts; loader hidden not removed. Turntable frames fetched as blobs → createImageBitmap(blob) (off-main-thread decode), 4 in flight, preloaded in idle time after the intro.
+- Result @4x throttle: lift + intro worst frame 11.6 ms (was 189 ms stall); scroll hero→turntable worst frame 20 ms after intro (was ~1000 ms), 90 ms if scrolling mid-intro while frames still load. @1x: 0 frames > 33 ms.

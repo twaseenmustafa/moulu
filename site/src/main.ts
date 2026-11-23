@@ -3,7 +3,7 @@ import '@fontsource-variable/inter-tight/wght.css';
 import '@fontsource/jetbrains-mono/latin-500.css';
 import './styles.css';
 
-import { initScroll, initReveals, initMagnetic, initNav, initTransitions, initFilm, ScrollTrigger } from './modules/motion';
+import { initScroll, initReveals, initMagnetic, initNav, initTransitions, initFilm } from './modules/motion';
 import { runLoader, initHero } from './modules/hero';
 import { initTurntable } from './modules/turntable';
 import { initMood } from './modules/mood';
@@ -19,11 +19,11 @@ initSpecs();
 initMagnetic();
 initTransitions();
 
-runLoader().then(() => {
-  // Pinned scenes are created top-to-bottom so ScrollTrigger measures pin spacing in order.
+// Pinned scenes are created top-to-bottom (ScrollTrigger measures pin spacing in order),
+// and only behind the loader, so their setup cost never lands mid-animation.
+runLoader(() => {
   initHero();
   initFilm();
   initTurntable();
   initReveals();
-  ScrollTrigger.refresh();
 });
