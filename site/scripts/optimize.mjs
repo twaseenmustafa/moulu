@@ -50,5 +50,6 @@ for (const f of ['macro', 'workshop', 'anatomy']) await emit(RAW + f + '.png', f
 await emit(RAW + 'corner.png', 'corner', [1400, 800], { avif: 48 });
 for (const f of ['privacy', 'imprint']) await emit(RAW + f + '.png', f, [1400, 800], { avif: 48 });
 // Social share image (JPEG, 1200x630) from the room shot.
-await sharp(RAW + 'room_16x9.png').resize(1200, 630, { fit: 'cover' }).jpeg({ quality: 78, mozjpeg: true }).toFile(OUT + 'og.jpg');
+// og-moulu.jpg is the generated social preview (hand-placed, not built here)
+// await sharp(RAW + 'room_16x9.png').resize(1200, 630, { fit: 'cover' }).jpeg({ quality: 78, mozjpeg: true }).toFile(OUT + 'og.jpg');
 console.log('done');
