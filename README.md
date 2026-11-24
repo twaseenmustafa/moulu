@@ -8,7 +8,7 @@ built around one measured feeling: <b>the nine-centimetre sink.</b>
 </p>
 
 <p align="center">
-<a href="https://moulu.vercel.app/"><img src=".github/assets/btn-visit.png" alt="Visit the Moulu site" height="56"></a>
+<a href="https://moulu.vercel.app/"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/btn-visit-light.png"><img src=".github/assets/btn-visit.png" alt="Visit the Moulu site" height="56"></picture></a>
 </p>
 
 <a href="https://moulu.vercel.app/"><img src=".github/assets/hero.jpg" alt="Moulu hero: the Dune sofa in Ember bouclé sitting in front of a giant MOULU wordmark, with a sink ruler at 0.0 cm" width="100%"></a>
@@ -122,7 +122,7 @@ Read in this order: [BRAND](docs/BRAND.md) → [DESIGN](docs/DESIGN.md) → [PRO
 <br>
 
 <p align="center">
-<a href="https://moulu.vercel.app/"><img src=".github/assets/btn-visit.png" alt="Visit the Moulu site" height="56"></a>
+<a href="https://moulu.vercel.app/"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/btn-visit-light.png"><img src=".github/assets/btn-visit.png" alt="Visit the Moulu site" height="56"></picture></a>
 <br><br>
 <sub>Built for the long sit.</sub>
 </p>
