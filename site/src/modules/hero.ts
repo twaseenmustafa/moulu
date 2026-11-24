@@ -3,71 +3,53 @@ import { gsap, ScrollTrigger, SplitText, reduced, lenis, SINK } from './motion';
 const q = <T extends Element = HTMLElement>(s: string) => document.querySelector<T>(s)!;
 const LATE = ['.hero__lede', '.hero__card', '.hero__ruler', '.hero__hint'];
 
+/** One clock for the whole hero entrance: every tween starts at 0 and lasts D, so all of it starts and ends together. */
+const D = 1.4;
+
 /**
  * Hero entrance, built paused with its start states applied immediately,
  * so nothing is ever visible in its final state before the loader reveals it.
  */
 function buildIntro() {
   const letters = gsap.utils.toArray<SVGGElement>('.hero__l');
-  // CSS centres these with translateX(-50%); hand that to GSAP so scale/y compose cleanly.
-  gsap.set(['.hero__sofa', '.hero__shadow', '.hero__word'], { xPercent: -50, x: 0 });
-  return gsap.timeline({ paused: true, defaults: { ease: SINK } })
-    .fromTo('.hero__plane', { scale: 1.12 }, { scale: 1, duration: 1.8 }, 0)
-    .fromTo(letters, { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 1.25, stagger: 0.07 }, 0.1)
-    // the sofa drops in and settles: the brand's "sink", told once on arrival
-    .fromTo('.hero__sofa img', { y: -70, scale: 0.92 }, { y: 0, scale: 1, duration: 1.6, ease: 'expo.out' }, 0.25)
-    .fromTo('.hero__shadow', { opacity: 0, scaleX: 0.55 }, { opacity: 1, scaleX: 1, duration: 1.4 }, 0.45)
-    // nav: opacity on the bar + lift on its children (the bar's own transform belongs to the hide-on-scroll CSS)
-    .fromTo('.nav', { opacity: 0 }, { opacity: 1, duration: 0.8, ease: 'power2.out' }, 0.55)
-    // never transform .nav__nav: it would become the containing block of the absolute mobile Menu button
-    .fromTo(['.nav__logo', '.nav__menu', '.nav__links', '.nav > .btn'], { y: -16 }, { y: 0, duration: 1.1, stagger: 0.06, clearProps: 'transform' }, 0.55)
-    // supporting UI enters with the hero, each with its own gesture
-    .add(rulerIn(), 0.5)
-    .add(ledeIn(), 0.6)
-    .add(cardIn(), 0.7)
-    .add(hintIn(), 0.95);
-}
-
-/** Ruler: the tick line draws top→bottom (0→100%), then calibrates once 0 → 9 → 0 cm. */
-function rulerIn() {
   const label = q('[data-sink]');
   const line = q('.hero__ruler i');
+  const hint = q('.hero__hint-line');
+  const chars = SplitText.create('.hero__hint-t', { type: 'chars' }).chars;
   const v = { s: 0 };
-  const show = () => { if (scrollY > 2) return; // the scroll scene owns the ruler once the user scrolls
+  const sink = () => { if (scrollY > 2) return; // the scroll scene owns the ruler once the user scrolls
     label.textContent = v.s.toFixed(1); line.style.setProperty('--sink', `${v.s * 12}px`); };
-  return gsap.timeline()
-    .fromTo('.hero__ruler > span', { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0)
-    .fromTo(line, { scaleY: 0, transformOrigin: '50% 0%' }, { scaleY: 1, duration: 0.9, ease: 'power3.inOut' }, 0.1)
-    .fromTo('.hero__ruler > b', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0.6)
-    .to(v, { s: 9, duration: 0.7, ease: 'power2.inOut', onUpdate: show }, 0.75)
-    .to(v, { s: 0, duration: 0.8, ease: 'power3.inOut', onUpdate: show }, 1.5);
-}
-
-/** Lede: the tag pops, then each line wipes in from the left. */
-function ledeIn() {
-  return gsap.timeline()
-    .fromTo('.hero__lede .tag', { scale: 0, opacity: 0, transformOrigin: '0% 50%' }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(2)' }, 0)
-    .fromTo('.hero__lede-l', { clipPath: 'inset(0% 100% 0% 0%)', x: -28 }, { clipPath: 'inset(0% 0% 0% 0%)', x: 0, duration: 1.1, ease: 'expo.out', stagger: 0.14 }, 0.2);
-}
-
-/** Card: pops up from its corner with a soft overshoot; its contents follow in sequence. */
-function cardIn() {
-  return gsap.timeline()
-    .fromTo('.hero__card', { opacity: 0, y: 50, scale: 0.86, transformOrigin: '100% 100%' }, { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'back.out(1.4)' }, 0)
-    .fromTo('.hero__card > *', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08 }, 0.3);
-}
-
-/** Hint: letters resolve outward from the centre, then a calm scroll pulse loops. */
-function hintIn() {
-  const split = SplitText.create('.hero__hint-t', { type: 'chars' });
-  const line = q('.hero__hint-line');
-  gsap.set(line, { scaleY: 0 });
+  // the scroll cue's idle pulse starts after the entrance (it is a loop, not part of the reveal)
   const pulse = gsap.timeline({ paused: true, repeat: -1, repeatDelay: 0.4 })
-    .fromTo(line, { scaleY: 0, transformOrigin: '50% 0%' }, { scaleY: 1, duration: 0.7, ease: 'power2.inOut' })
-    .set(line, { transformOrigin: '50% 100%' })
-    .to(line, { scaleY: 0, duration: 0.7, ease: 'power2.inOut' });
-  return gsap.timeline({ onComplete: () => { pulse.play(); } })
-    .fromTo(split.chars, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: { each: 0.025, from: 'center' } }, 0);
+    .fromTo(hint, { scaleY: 0, transformOrigin: '50% 0%' }, { scaleY: 1, duration: 0.7, ease: 'power2.inOut' })
+    .set(hint, { transformOrigin: '50% 100%' })
+    .to(hint, { scaleY: 0, duration: 0.7, ease: 'power2.inOut' });
+  gsap.set(hint, { scaleY: 0 });
+  // CSS centres these with translateX(-50%); hand that to GSAP so scale/y compose cleanly.
+  gsap.set(['.hero__sofa', '.hero__shadow', '.hero__word'], { xPercent: -50, x: 0 });
+
+  return gsap.timeline({ paused: true, defaults: { ease: SINK, duration: D }, onComplete: () => { pulse.play(); } })
+    .fromTo('.hero__plane', { scale: 1.12 }, { scale: 1 }, 0)
+    .fromTo(letters, { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1 }, 0)
+    .fromTo('.hero__sofa img', { y: -70, scale: 0.92 }, { y: 0, scale: 1 }, 0) // the sofa drops in and settles
+    .fromTo('.hero__shadow', { opacity: 0, scaleX: 0.55 }, { opacity: 1, scaleX: 1 }, 0)
+    // nav: opacity on the bar + lift on its children (the bar's own transform belongs to the hide-on-scroll CSS;
+    // never transform .nav__nav: it would become the containing block of the absolute mobile Menu button)
+    .fromTo('.nav', { opacity: 0 }, { opacity: 1, ease: 'power2.out' }, 0)
+    .fromTo(['.nav__logo', '.nav__menu', '.nav__links', '.nav > .btn'], { y: -16 }, { y: 0, clearProps: 'transform' }, 0)
+    // ruler: line draws top→bottom while labels arrive; one calibration swing 0 → 9 → 0 cm
+    .fromTo('.hero__ruler > span', { opacity: 0, y: -10 }, { opacity: 1, y: 0, ease: 'power3.out' }, 0)
+    .fromTo(line, { scaleY: 0, transformOrigin: '50% 0%' }, { scaleY: 1, ease: 'power3.inOut' }, 0)
+    .fromTo('.hero__ruler > b', { opacity: 0, y: 10 }, { opacity: 1, y: 0, ease: 'power3.out' }, 0)
+    .to(v, { keyframes: { s: [0, 9, 0] }, ease: 'power2.inOut', onUpdate: sink }, 0)
+    // lede: tag pops, lines wipe in from the left
+    .fromTo('.hero__lede .tag', { scale: 0, opacity: 0, transformOrigin: '0% 50%' }, { scale: 1, opacity: 1, ease: 'back.out(2)' }, 0)
+    .fromTo('.hero__lede-l', { clipPath: 'inset(0% 100% 0% 0%)', x: -28 }, { clipPath: 'inset(0% 0% 0% 0%)', x: 0, ease: 'expo.out' }, 0)
+    // card: pops from its corner; contents fade up with it
+    .fromTo('.hero__card', { opacity: 0, y: 50, scale: 0.86, transformOrigin: '100% 100%' }, { opacity: 1, y: 0, scale: 1, ease: 'back.out(1.4)' }, 0)
+    .fromTo('.hero__card > *', { opacity: 0, y: 14 }, { opacity: 1, y: 0, ease: 'power3.out' }, 0)
+    // scroll hint: letters resolve
+    .fromTo(chars, { opacity: 0, y: 8 }, { opacity: 1, y: 0, ease: 'power2.out' }, 0);
 }
 
 const frame = () => new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
@@ -84,7 +66,6 @@ const within = (p: Promise<unknown>, ms: number) => Promise.race([p.catch(() => 
 export async function runLoader(setup: () => void): Promise<void> {
   const loader = q('.loader');
   if (reduced) { loader.remove(); setup(); return; }
-  const intro = buildIntro();
   lenis?.stop();
   await within(document.fonts.ready, 900);
   await frame();
@@ -102,6 +83,9 @@ export async function runLoader(setup: () => void): Promise<void> {
   performance.mark('loader:setup');
   setup();
   ScrollTrigger.refresh();
+  // built after the scroll scenes: their refresh renders opacity 1 on the lede/card/hint, so the intro's
+  // start states must be applied last or those elements would flash in before the reveal
+  const intro = buildIntro();
   await frame(); // let the setup's layout/paint land before anything moves again
 
   performance.mark('loader:exit');

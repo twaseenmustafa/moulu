@@ -55,3 +55,9 @@ Pass 1 → 2 fixes: `[hidden]` overridden by `.success{display:grid}`; sofa not 
 - Diagnosis (recording frame-diff + Chrome long-task/LoAF traces, 1x and 4x CPU): (1) all scroll scenes + ScrollTrigger.refresh were built right after the loader lifted → 190 ms task mid-intro; (2) font swap relayout stalled the loader ring; (3) turntable frames turned into bitmaps from <img> → ~1 s main-thread hitch on first scroll.
 - Fix: loader waits for fonts before drawing; builds every scroll scene behind the finished ring (after `load`), then 2 frames, then lifts; loader hidden not removed. Turntable frames fetched as blobs → createImageBitmap(blob) (off-main-thread decode), 4 in flight, preloaded in idle time after the intro.
 - Result @4x throttle: lift + intro worst frame 11.6 ms (was 189 ms stall); scroll hero→turntable worst frame 20 ms after intro (was ~1000 ms), 90 ms if scrolling mid-intro while frames still load. @1x: 0 frames > 33 ms.
+
+## Pass 7 (2026-11-24): synchronized hero entrance
+- All hero entrance tweens (plane, letters, sofa, shadow, nav, ruler, lede, card + contents, hint) now share one paused timeline: every tween at position 0, duration 1.4 s, no staggers or sub-delays; ruler calibration is a single 0-9-0 keyframe tween over the same 1.4 s. Hint pulse loop starts on completion.
+- Single trigger unchanged: intro.play() at the loader hand-off (loader edge mid-screen), after content is ready and scroll scenes are built.
+- Fixed: intro is now built after the scroll-scene refresh, which had re-rendered the card/lede/hint at opacity 1 under the loader (flash before reveal).
+- Verified fresh + reload: all elements start in the same 25 ms sample; all hidden under loader, all visible after; reduced motion shows everything with no loader.
