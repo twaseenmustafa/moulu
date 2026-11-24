@@ -4,22 +4,121 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Imprint — Moulu</title>
-  <meta name="description" content="Imprint for the Moulu concept site." />
-  <meta name="robots" content="noindex" />
+  <meta name="description" content="Who is behind Moulu: company details, contact and credits for the concept site." />
+  <meta name="theme-color" content="#dc6d30" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
-<body>
+<body class="sub">
+  <a class="skip" href="#main">Skip to content</a>
   <div class="curtain" aria-hidden="true"></div>
-  <main class="legal">
-    <a href="/" class="link-arrow" data-transition><span aria-hidden="true">←</span> Back to Moulu</a>
-    <h1>Imprint</h1>
-    <p class="mono">Placeholder — Moulu is a fictional concept brand. Replace with real legal text before launch.</p>
-    <h2>Provider</h2>
-    <p>[Placeholder: company name, address, register number, VAT ID, managing director.]</p>
-    <h2>Contact</h2>
-    <p>[Placeholder: email and phone.]</p>
+  <svg width="0" height="0" class="sr-only" aria-hidden="true"><defs><g id="wordmark" fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"><path d="M13 87V36a23 23 0 0 1 46 0v51M59 36a23 23 0 0 1 46 0v51" /><circle cx="182" cy="50" r="37" /><path d="M259 13v37a37 37 0 0 0 74 0V13" /><path d="M373 13v74h57" /><path d="M470 13v37a37 37 0 0 0 74 0V13" /></g></defs></svg>
+
+  <header class="nav" data-nav>
+    <a href="/" class="nav__logo" aria-label="Moulu home" data-transition><svg viewBox="0 0 557 100" aria-hidden="true"><use href="#wordmark" /></svg></a>
+    <nav aria-label="Primary" class="nav__nav">
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/#turn" data-transition>Dune</a></li>
+        <li><a href="/#craft" data-transition>Craft</a></li>
+        <li><a href="/#collection" data-transition>Collection</a></li>
+        <li><a href="/imprint.html" aria-current="page">Imprint</a></li>
+        <li><a href="/privacy.html" data-transition>Privacy</a></li>
+      </ul>
+    </nav>
+    <a href="/#reserve" class="btn btn--dark btn--sm" data-magnetic data-transition><span class="btn__roll"><span>Reserve free</span></span></a>
+  </header>
+
+  <main id="main">
+    <!-- hero -->
+    <section class="im-hero wrap" aria-labelledby="pg-title">
+      <div class="im-hero__head">
+        <span class="mono tag">Imprint</span>
+        <h1 id="pg-title" class="pg-title reveal-lines">Who’s behind<br />the sofa.</h1>
+      </div>
+        <figure class="im-hero__img parallax" data-speed="-0.06">
+          <picture>
+            <source type="image/avif" srcset="/media/imprint-800.avif 800w, /media/imprint-1400.avif 1400w" sizes="(min-width: 900px) 46vw, 92vw" />
+            <img src="/media/imprint-1400.webp" srcset="/media/imprint-800.webp 800w, /media/imprint-1400.webp 1400w" sizes="(min-width: 900px) 46vw, 92vw" width="1792" height="2240" fetchpriority="high" decoding="async" alt="Flat-lay of upholstery tools on oak: Ember, Chalk and Cocoa fabric swatches, tape measure, chalk, hammer, pincushion and a blank brass nameplate" />
+          </picture>
+        </figure>
+        <!-- the nameplate: legal details, engraved -->
+        <div class="plate reveal">
+        <dl aria-label="Company details">
+          <div><dt>Company</dt><dd>Moulu <span class="ph">[legal form]</span></dd></div>
+          <div><dt>Studio</dt><dd><span class="ph">[Street 1]</span><br /><span class="ph">[Postcode City, Country]</span></dd></div>
+          <div><dt>Register</dt><dd><span class="ph">[Court · HRB 000000]</span></dd></div>
+          <div><dt>VAT ID</dt><dd><span class="ph">[DE000000000]</span></dd></div>
+          <div><dt>Director</dt><dd><span class="ph">[Name]</span></dd></div>
+        </dl>
+          <p class="plate__note mono">Placeholder — fictional concept brand</p>
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section class="pg-sec wrap" aria-labelledby="talk-title">
+      <h2 id="talk-title" class="display display--md reveal-lines">Talk to<br />a human.</h2>
+      <ul class="contact">
+        <li class="reveal"><a class="contact__tile" href="mailto:hello@moulu.example"><span class="mono">Email</span><b>hello@<br />moulu.example</b><i aria-hidden="true">→</i></a></li>
+        <li class="reveal"><a class="contact__tile" href="tel:+490000000000"><span class="mono">Phone</span><b>+49 000<br />000 000</b><i aria-hidden="true">→</i></a></li>
+        <li class="reveal"><div class="contact__tile contact__tile--dark"><span class="mono">Studio visits</span><b>By<br />appointment</b><i aria-hidden="true">●</i></div></li>
+      </ul>
+      <p class="mono pg-aside reveal">Contact details are placeholders.</p>
+    </section>
+
+    <!-- credits -->
+    <section class="panel-dark im-credits" aria-labelledby="made-title">
+      <div class="wrap">
+        <span class="mono tag tag--light">Credits</span>
+        <h2 id="made-title" class="display display--md reveal-lines">Made with.</h2>
+        <ul class="specimens">
+          <li class="reveal"><span class="specimens__aa" style="font-family: var(--f-display); font-weight: 760">Aa</span><b>Bricolage Grotesque</b><span class="mono">Display</span></li>
+          <li class="reveal"><span class="specimens__aa" style="font-family: var(--f-text); font-weight: 500">Aa</span><b>Inter Tight</b><span class="mono">Text</span></li>
+          <li class="reveal"><span class="specimens__aa" style="font-family: var(--f-mono)">Aa</span><b>JetBrains Mono</b><span class="mono">Labels</span></li>
+        </ul>
+        <ul class="credits mono">
+          <li class="reveal"><span>Images</span><b>AI renders · Higgsfield</b></li>
+          <li class="reveal"><span>Motion</span><b>GSAP · Lenis</b></li>
+          <li class="reveal"><span>Build</span><b>Vite · TypeScript</b></li>
+          <li class="reveal"><span>Fonts</span><b>Self-hosted · no Google calls</b></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- small print -->
+    <section class="pg-sec wrap" aria-labelledby="small-title">
+      <h2 id="small-title" class="display display--md reveal-lines">The small print.</h2>
+      <ol class="small">
+        <li class="reveal"><span class="mono">01</span><p><b>Fictional brand.</b><br />Products, prices, specs: placeholders.</p></li>
+        <li class="reveal"><span class="mono">02</span><p><b>AI imagery.</b><br />Renders, not photographs of real pieces.</p></li>
+        <li class="reveal"><span class="mono">03</span><p><b>Outbound links.</b><br />Not responsible for others’ sites.</p></li>
+      </ol>
+    </section>
+
+    <!-- back -->
+    <section class="im-back wrap">
+      <a href="/" class="im-back__link" data-transition>
+        <span class="mono">Back to the sofa</span>
+        <svg viewBox="0 0 557 100" aria-hidden="true"><use href="#wordmark" /></svg>
+        <span class="sr-only">Moulu home</span>
+      </a>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <p class="footer__claim">Furniture you sink into, slowly.<br /><span class="mono">Concept brand · launch 2027 · EU</span></p>
+        <nav aria-label="Footer">
+          <ul><li><a href="/#turn" data-transition>Dune</a></li><li><a href="/#craft" data-transition>Craft</a></li><li><a href="/#collection" data-transition>Collection</a></li><li><a href="/#reserve" data-transition>Reserve</a></li></ul>
+        </nav>
+        <nav aria-label="Legal">
+          <ul><li><a href="/imprint.html" aria-current="page">Imprint</a></li><li><a href="/privacy.html" data-transition>Privacy</a></li><li><span class="mono">No cookies. No tracking.</span></li></ul>
+        </nav>
+      </div>
+      <p class="footer__fine mono">© 2026 Moulu — a fictional concept brand. Images are AI-generated renders. Product, prices and specs are placeholders.</p>
+    </div>
+  </footer>
   <script type="module" src="/src/legal.ts"></script>
 </body>
 </html>

@@ -69,3 +69,8 @@ Pass 1 → 2 fixes: `[hidden]` overridden by `.success{display:grid}`; sofa not 
 
 ## Pass 9 (2026-11-24): button hover
 - Label roll was broken (overflow:hidden on the moving element clipped the incoming label; outgoing text stayed half-visible in the taller button). Now a fixed 1-line mask + inner span with a text-shadow duplicate sliding up 1.3em. Verified nav + reserve buttons hovered in Ember/Chalk/Cocoa.
+
+## Pass 10 (2026-11-24): Privacy + Imprint pages
+- Privacy ("Nothing to keep."): split hero w/ glass 0-cookies chip, 0/0/0/1 stat strip, browser-vs-server data-flow diagram, 4 rights tiles, working clear-my-reservations control (localStorage), contact. Imprint ("Who is behind the sofa."): flat-lay + copper nameplate (company placeholders), contact tiles, type specimens + credits, small print, wordmark back-link. Shared nav/footer, Lenis, reveals, parallax; styles in src/sub.css.
+- Fixed while reviewing: curtain transition ended ON screen (GSAP kept CSS translateY(100%) as px) -> every page transition; /#section links from sub pages landed a viewport off (jump now after the loader refresh); invalid <dl> child; noindex removed (SEO 66 -> 100); mobile tile height.
+- Verified x3: desktop/mobile section captures, cross-page links + curtain, all 6 landing anchors land at top=0, clear control, widths 360/768/1920 no h-scroll, reduced motion, 0 console errors, scroll 0 frames >33 ms. Lighthouse mobile: privacy 98/100/100/100, imprint 97/100/100/100.

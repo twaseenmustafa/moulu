@@ -3,25 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy note — Moulu</title>
-  <meta name="description" content="Privacy note for the Moulu concept site." />
-  <meta name="robots" content="noindex" />
+  <title>Privacy — Moulu</title>
+  <meta name="description" content="Moulu keeps nothing about you: no cookies, no trackers, no server-side data. Here is exactly how, in two minutes." />
+  <meta name="theme-color" content="#dc6d30" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
-<body>
+<body class="sub">
+  <a class="skip" href="#main">Skip to content</a>
   <div class="curtain" aria-hidden="true"></div>
-  <main class="legal">
-    <a href="/" class="link-arrow" data-transition><span aria-hidden="true">←</span> Back to Moulu</a>
-    <h1>Privacy note</h1>
-    <p class="mono">Placeholder — Moulu is a fictional concept brand. Replace with real legal text before launch.</p>
-    <h2>What this site stores</h2>
-    <p>Nothing on a server. A reservation is saved only in your own browser (localStorage) so the confirmation can show it. Clear your browser storage to remove it.</p>
-    <h2>Cookies and tracking</h2>
-    <p>None. No analytics, no third-party fonts or scripts; everything is served from this domain.</p>
-    <h2>Contact</h2>
-    <p>[Placeholder: data controller name and contact address.]</p>
+  <svg width="0" height="0" class="sr-only" aria-hidden="true"><defs><g id="wordmark" fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"><path d="M13 87V36a23 23 0 0 1 46 0v51M59 36a23 23 0 0 1 46 0v51" /><circle cx="182" cy="50" r="37" /><path d="M259 13v37a37 37 0 0 0 74 0V13" /><path d="M373 13v74h57" /><path d="M470 13v37a37 37 0 0 0 74 0V13" /></g></defs></svg>
+
+  <header class="nav" data-nav>
+    <a href="/" class="nav__logo" aria-label="Moulu home" data-transition><svg viewBox="0 0 557 100" aria-hidden="true"><use href="#wordmark" /></svg></a>
+    <nav aria-label="Primary" class="nav__nav">
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/#turn" data-transition>Dune</a></li>
+        <li><a href="/#craft" data-transition>Craft</a></li>
+        <li><a href="/#collection" data-transition>Collection</a></li>
+        <li><a href="/imprint.html" data-transition>Imprint</a></li>
+        <li><a href="/privacy.html" aria-current="page">Privacy</a></li>
+      </ul>
+    </nav>
+    <a href="/#reserve" class="btn btn--dark btn--sm" data-magnetic data-transition><span class="btn__roll"><span>Reserve free</span></span></a>
+  </header>
+
+  <main id="main">
+    <!-- hero -->
+    <section class="pg-hero wrap" aria-labelledby="pg-title">
+      <div class="pg-hero__copy">
+        <span class="mono tag">Privacy · 2 min</span>
+        <h1 id="pg-title" class="pg-title reveal-lines">Nothing<br />to keep.</h1>
+        <p class="pg-lede reveal">We built this site to forget you.<br />Here’s exactly how.</p>
+        <p class="mono pg-meta reveal">Updated 24 Nov 2026</p>
+      </div>
+      <figure class="pg-hero__img parallax" data-speed="-0.08">
+        <picture>
+          <source type="image/avif" srcset="/media/privacy-800.avif 800w, /media/privacy-1400.avif 1400w" sizes="(min-width: 900px) 46vw, 92vw" />
+          <img src="/media/privacy-1400.webp" srcset="/media/privacy-800.webp 800w, /media/privacy-1400.webp 1400w" sizes="(min-width: 900px) 46vw, 92vw" width="1792" height="2240" fetchpriority="high" decoding="async" alt="A Moulu Pebble armchair alone in a room with sheer curtains drawn, warm light filtering through" />
+        </picture>
+        <figcaption class="pg-chip glass"><b>0</b><span class="mono">cookies set<br />on this visit</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- at a glance -->
+    <section class="stats pg-stats" aria-label="At a glance">
+      <ul class="stats__row wrap">
+        <li><span class="stats__n">0</span><span class="mono">cookies</span></li>
+        <li><span class="stats__n">0</span><span class="mono">trackers or analytics</span></li>
+        <li><span class="stats__n">0</span><span class="mono">third-party requests</span></li>
+        <li><span class="stats__n"><span data-count="1">1</span></span><span class="mono">place your data lives:<br />your browser</span></li>
+      </ul>
+    </section>
+
+    <!-- where data lives -->
+    <section class="pg-sec wrap" aria-labelledby="flow-title">
+      <h2 id="flow-title" class="display display--md reveal-lines">Where your<br />data lives.</h2>
+      <div class="flow">
+        <article class="flow__card reveal">
+          <span class="mono tag">Your browser</span>
+          <h3>Your reservation</h3>
+          <ul class="flow__list mono">
+            <li>Name</li><li>Email</li><li>Country</li><li>Piece + fabric</li>
+          </ul>
+          <p class="flow__note">Saved in <code>localStorage</code>.<br />Only on this device.</p>
+        </article>
+        <div class="flow__link reveal" aria-hidden="true"><i></i><b>×</b><span class="mono">never sent</span></div>
+        <article class="flow__card flow__card--empty reveal">
+          <span class="mono tag tag--ink">Our servers</span>
+          <h3>Nothing.</h3>
+          <p class="flow__zero" aria-hidden="true">0</p>
+          <p class="flow__note">No database.<br />No logs of you.</p>
+        </article>
+      </div>
+      <p class="mono pg-aside reveal">Concept site. A live launch would add a server — this page would change first.</p>
+    </section>
+
+    <!-- rights -->
+    <section class="pg-sec wrap" aria-labelledby="rights-title">
+      <h2 id="rights-title" class="display display--md reveal-lines">Your rights,<br />in four words.</h2>
+      <ul class="tiles">
+        <li class="tile reveal"><span class="mono">01</span><b>See</b><p>Ask what we hold.<br />Today: nothing.</p></li>
+        <li class="tile reveal"><span class="mono">02</span><b>Fix</b><p>Wrong details?<br />Re-reserve in seconds.</p></li>
+        <li class="tile reveal"><span class="mono">03</span><b>Delete</b><p>One button.<br />Right below.</p></li>
+        <li class="tile reveal"><span class="mono">04</span><b>Ask</b><p>Any question.<br />A human answers.</p></li>
+      </ul>
+    </section>
+
+    <!-- clear it yourself -->
+    <section class="panel-dark pg-clear" aria-labelledby="clear-title">
+      <div class="wrap pg-clear__grid">
+        <div>
+          <span class="mono tag tag--light">Do it yourself</span>
+          <h2 id="clear-title" class="display display--md reveal-lines">Clear it.<br />Right now.</h2>
+        </div>
+        <div class="pg-clear__box glass glass--copper reveal" data-clear>
+          <p class="pg-clear__n"><b data-res-count>0</b><span class="mono" data-res-label>reservations in this browser</span></p>
+          <button class="btn btn--full pg-clear__btn" type="button" data-res-clear><span class="btn__roll"><span>Delete them</span></span></button>
+          <p class="pg-clear__status mono" role="status" aria-live="polite" data-res-status></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="pg-sec pg-contact wrap" aria-labelledby="ask-title">
+      <h2 id="ask-title" class="display display--md reveal-lines">Still curious?</h2>
+      <a class="pg-mail reveal" href="mailto:privacy@moulu.example">privacy@moulu.example <span aria-hidden="true">→</span></a>
+      <p class="mono pg-aside reveal">Data controller: <span class="ph">[Company name, address — placeholder]</span></p>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <svg class="footer__word" viewBox="0 0 557 100" aria-hidden="true"><use href="#wordmark" /></svg>
+      <div class="footer__grid">
+        <p class="footer__claim">Furniture you sink into, slowly.<br /><span class="mono">Concept brand · launch 2027 · EU</span></p>
+        <nav aria-label="Footer">
+          <ul><li><a href="/#turn" data-transition>Dune</a></li><li><a href="/#craft" data-transition>Craft</a></li><li><a href="/#collection" data-transition>Collection</a></li><li><a href="/#reserve" data-transition>Reserve</a></li></ul>
+        </nav>
+        <nav aria-label="Legal">
+          <ul><li><a href="/imprint.html" data-transition>Imprint</a></li><li><a href="/privacy.html" aria-current="page">Privacy</a></li><li><span class="mono">No cookies. No tracking.</span></li></ul>
+        </nav>
+      </div>
+      <p class="footer__fine mono">© 2026 Moulu — a fictional concept brand. Images are AI-generated renders. Product, prices and specs are placeholders.</p>
+    </div>
+  </footer>
   <script type="module" src="/src/legal.ts"></script>
 </body>
 </html>

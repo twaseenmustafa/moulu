@@ -48,6 +48,7 @@ await emit(RAW + 'room_16x9.png', 'room', [2400, 1600, 960], { avif: 45 });
 await emit(RAW + 'room_9x16.png', 'room-tall', [900, 600], { avif: 45 });
 for (const f of ['macro', 'workshop', 'anatomy']) await emit(RAW + f + '.png', f, [1100, 640], { avif: 48 });
 await emit(RAW + 'corner.png', 'corner', [1400, 800], { avif: 48 });
+for (const f of ['privacy', 'imprint']) await emit(RAW + f + '.png', f, [1400, 800], { avif: 48 });
 // Social share image (JPEG, 1200x630) from the room shot.
 await sharp(RAW + 'room_16x9.png').resize(1200, 630, { fit: 'cover' }).jpeg({ quality: 78, mozjpeg: true }).toFile(OUT + 'og.jpg');
 console.log('done');

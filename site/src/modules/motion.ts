@@ -98,6 +98,8 @@ export function initNav() {
 export function initTransitions() {
   const curtain = document.querySelector<HTMLElement>('.curtain');
   if (!curtain) return;
+  // Hand the CSS translateY(100%) to GSAP as yPercent; otherwise GSAP keeps it as a px offset and the curtain ends on screen.
+  gsap.set(curtain, { y: 0, yPercent: 100 });
   if (sessionStorage.getItem('moulu-curtain') && !reduced) {
     sessionStorage.removeItem('moulu-curtain');
     gsap.fromTo(curtain, { yPercent: 0 }, { yPercent: -100, duration: 0.9, ease: 'expo.inOut', delay: 0.1 });

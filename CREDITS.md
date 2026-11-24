@@ -34,3 +34,10 @@ Account balance at start: 263.87 (only 100 may be used). Quoted costs (estimate 
 | | **Remaining of 100 budget** | | **48.75** | no regenerations were needed |
 
 Rejected shots: none — every output passed the AI-error check (seams, legs, fabric, text). Remove-background was not needed (model output transparent PNGs directly).
+
+## Sub-page visuals (2026-11-24, separate 10-credit budget)
+| # | Asset | Model | Credits | Result |
+|---|---|---|---|---|
+| 7 | Privacy: Pebble chair, curtains drawn (ref = master) | gpt_image_2_6 high 2k | 2.00 | ok |
+| 8 | Imprint: maker flat-lay (3 swatches, tools, blank brass plate) | gpt_image_2_6 high 2k | 2.00 | ok, no text artefacts |
+| | **Used / budget** | | **4.00 / 10** | balance 212.62 -> 208.62 (verified) |

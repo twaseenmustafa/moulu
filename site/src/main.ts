@@ -3,7 +3,7 @@ import '@fontsource-variable/inter-tight/wght.css';
 import '@fontsource/jetbrains-mono/latin-500.css';
 import './styles.css';
 
-import { initScroll, initReveals, initMagnetic, initNav, initTransitions, initFilm } from './modules/motion';
+import { initScroll, initReveals, initMagnetic, initNav, initTransitions, initFilm, lenis } from './modules/motion';
 import { runLoader, initHero } from './modules/hero';
 import { initTurntable } from './modules/turntable';
 import { initMood } from './modules/mood';
@@ -26,4 +26,8 @@ runLoader(() => {
   initFilm();
   initTurntable();
   initReveals();
+  // Arriving from a sub page via /#section: jump there behind the loader (scroll restoration is manual).
+  const target = location.hash ? document.querySelector<HTMLElement>(location.hash) : null;
+  // next frame: after runLoader's own ScrollTrigger.refresh() (which re-measures pins), still behind the loader
+  if (target) requestAnimationFrame(() => { if (lenis) lenis.scrollTo(target, { immediate: true, force: true }); else target.scrollIntoView(); });
 });
