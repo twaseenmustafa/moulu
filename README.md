@@ -15,12 +15,12 @@ Built backwards from one number: nine centimetres.
 
 <br>
 
-|  |  |
-|---|---|
-| **Scroll once.** | The sofa sits down. The letters make room. |
-| **Keep going.** | 121 frames. Turn it around before you buy. |
-| **Pick a fabric.** | Ember, Chalk, Cocoa. The whole page follows. |
-| **Save your seat.** | Free. Nothing leaves your browser. |
+<p align="center">
+<b>Scroll once.</b> The sofa sits down. The letters make room.<br>
+<b>Keep going.</b> 121 frames. Turn it around before you buy.<br>
+<b>Pick a fabric.</b> Ember, Chalk, Cocoa. The whole page follows.<br>
+<b>Save your seat.</b> Free. Nothing leaves your browser.
+</p>
 
 <br>
 
