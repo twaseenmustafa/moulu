@@ -28,5 +28,5 @@ Built backwards from one number: nine centimetres.
 cd site && npm install && npm run dev
 ```
 
-<sub>Vite · TypeScript · GSAP · Lenis &nbsp;—&nbsp; 0 cookies · 0 trackers · 100 accessibility &nbsp;—&nbsp; notes in <a href="docs/BRAND.md">brand</a> · <a href="docs/DESIGN.md">design</a> · <a href="docs/PROGRESS.md">progress</a></sub><br>
+<sub>Vite · TypeScript · GSAP · Lenis &nbsp;—&nbsp; 0 cookies · 0 trackers · 100 accessibility &nbsp;—&nbsp; read the <a href="docs/README.md">story</a> · <a href="docs/LESSONS.md">six things that broke</a></sub><br>
 <sub>Moulu is fictional. Imagery is AI-generated. Code is <a href="LICENSE">MIT</a>. Built for the long sit.</sub>

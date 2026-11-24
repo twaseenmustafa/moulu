@@ -5,3 +5,7 @@ assets-raw/
 *.log
 .npm-cache/
 docs/research/qa/*.png
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
