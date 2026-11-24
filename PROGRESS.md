@@ -66,3 +66,6 @@ Pass 1 → 2 fixes: `[hidden]` overridden by `.success{display:grid}`; sofa not 
 - Turntable: 121 frames (was 61), nearest frame drawn (cross-fade ghosted edges), linear rotation, scrub 0.8, needle moved by transform (was layout-triggering left), degree text only on change. Down/up @1x and @4x: 0 frames >33 ms; @4x down p95 19.9 -> 10.1 ms. Frames 2.8 MB desktop / 1.3 MB mobile, idle-preloaded.
 - FAQ: plus drawn from two centred CSS bars in an outlined ring (was a font glyph, off-centre); hover fill, rotates to x when open; smooth open via ::details-content where supported.
 - Review (desktop/mobile captures, interactions, widths, reduced motion): no new defects; 1px scrollWidth at 360/768 is the clipped hero bleed (no horizontal scroll).
+
+## Pass 9 (2026-11-24): button hover
+- Label roll was broken (overflow:hidden on the moving element clipped the incoming label; outgoing text stayed half-visible in the taller button). Now a fixed 1-line mask + inner span with a text-shadow duplicate sliding up 1.3em. Verified nav + reserve buttons hovered in Ember/Chalk/Cocoa.
