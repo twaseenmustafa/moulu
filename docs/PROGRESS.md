@@ -79,3 +79,7 @@ Pass 1 → 2 fixes: `[hidden]` overridden by `.success{display:grid}`; sofa not 
 - Firefox 1555 and WebKit 2370 (Playwright, desktop 1440 + mobile 390): hero, scroll into turntable, 0 console errors, 0 horizontal scroll, layout matches Chrome.
 - Ruler moved below the wordmark (top = word top + 0.18 word-width + 20px) so it no longer touches the last "U" at any width (checked 1024-2560).
 - Not covered: real Safari (iOS) touch behaviour, Firefox/WebKit frame timing. Legal text still placeholders (needs real company details).
+
+## Pass 12 (2026-11-24): repo + deploy
+- Docs moved to docs/, research to docs/research/. New on-brand README (art in .github/assets, rendered with the site fonts), MIT LICENSE.
+- GitHub Pages workflow; site builds under /moulu/ (BASE env, BASE_URL in TS, relative page links, absolute og/canonical). Verified the /moulu/ build locally: 0 failed requests, 0 console errors, cross-page links + video OK.

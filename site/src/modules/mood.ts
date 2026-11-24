@@ -1,7 +1,7 @@
 import { FABRIC_LINES, type Fabric } from '../data';
 
 const SIZES = '(min-width: 900px) 66vw, 106vw';
-const set = (f: string, ext: string) => [640, 1000, 1800].map((w) => `/media/dune-${f}-${w}.${ext} ${w}w`).join(', ');
+const set = (f: string, ext: string) => [640, 1000, 1800].map((w) => `${import.meta.env.BASE_URL}media/dune-${f}-${w}.${ext} ${w}w`).join(', ');
 
 /** One fabric choice recolours the page, swaps the sofa and syncs the form. */
 export function setMood(f: Fabric) {
@@ -19,7 +19,7 @@ export function setMood(f: Fabric) {
     const img = hero.querySelector('img')!;
     img.srcset = set(f, 'webp');
     img.sizes = SIZES;
-    img.src = `/media/dune-${f}-1000.webp`;
+    img.src = `${import.meta.env.BASE_URL}media/dune-${f}-1000.webp`;
     img.alt = img.alt.replace(/in \w+ \w+/, `in ${f[0].toUpperCase() + f.slice(1)} ${f === 'cocoa' ? 'velvet' : f === 'chalk' ? 'wool' : 'bouclé'}`);
   }
   syncInputs(f);

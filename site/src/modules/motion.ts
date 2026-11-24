@@ -118,7 +118,7 @@ export function initFilm() {
   const v = document.querySelector<HTMLVideoElement>('.film__video');
   if (!v) return;
   const mobile = matchMedia('(max-width: 700px)').matches;
-  v.poster = mobile ? '/media/hero-mobile-poster.jpg' : '/media/room-1600.webp';
+  v.poster = mobile ? `${import.meta.env.BASE_URL}media/hero-mobile-poster.jpg` : `${import.meta.env.BASE_URL}media/room-1600.webp`;
   const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
   if (reduced || saveData) return; // poster only
   new IntersectionObserver(([en]) => {

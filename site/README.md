@@ -1,6 +1,6 @@
 # Moulu — launch site
 
-Fictional premium sofa brand (see ../BRAND.md). Vite + TypeScript, GSAP (ScrollTrigger, SplitText), Lenis.
+Fictional premium sofa brand (see ../docs/BRAND.md). Vite + TypeScript, GSAP (ScrollTrigger, SplitText), Lenis.
 
 ```bash
 npm install
@@ -15,7 +15,7 @@ node scripts/optimize.mjs        # rebuild AVIF/WebP from ../assets-raw (raw PNG
 - `index.html` — all content is in the HTML (works without JS); `privacy.html`, `imprint.html` placeholders.
 - `src/modules/motion.ts` — Lenis, reveals, parallax, counters, magnetic buttons, nav, page curtain, film video.
 - `src/modules/hero.ts` — loader + "The Sink" pinned hero.
-- `src/modules/turntable.ts` — 61 frames scrubbed on a canvas (slider fallback for reduced motion).
+- `src/modules/turntable.ts` — 121 frames scrubbed on a canvas (slider fallback for reduced motion).
 - `src/modules/mood.ts` — fabric switch recolours the page via `html[data-mood]` tokens.
 - `src/modules/form.ts` + `validate.ts` — reservation form, inline errors, success state, localStorage.
 - `src/modules/specs.ts` — tabs + elevation drawing generated from product dimensions (`src/data.ts`).

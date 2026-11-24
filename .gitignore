@@ -1,8 +1,7 @@
 node_modules/
-.next/
-out/
-research/wiemer/*.png
+dist/
+docs/research/wiemer/*.png
 assets-raw/
 *.log
 .npm-cache/
-research/qa/*.png
+docs/research/qa/*.png

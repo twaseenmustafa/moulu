@@ -2,7 +2,7 @@
 
 **What it is:** fictional premium sofa brand "Moulu" + award-style launch site. Brand/design docs: BRAND.md, DESIGN.md. Wiemer study: ANALYSIS.md. Full history of decisions, fixes, scores: PROGRESS.md. Higgsfield credit ledger: CREDITS.md.
 
-**Stack:** Vite + TypeScript (vanilla), GSAP (ScrollTrigger, SplitText), Lenis. No Next.js (disk was nearly full). Code in `site/`; run `cd site && npm install && npm run dev` (build: `npm run build`, preview on :4173).
+**Stack:** Vite + TypeScript (vanilla), GSAP (ScrollTrigger, SplitText), Lenis. No Next.js (disk was nearly full). Code in `site/`; docs in `docs/`, research captures in `docs/research/`; run `cd site && npm install && npm run dev` (build: `npm run build`, preview on :4173).
 
 **Pages:** `index.html` (landing), `privacy.html`, `imprint.html` (share `src/legal.ts` + `src/sub.css`).
 

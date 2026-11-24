@@ -46,7 +46,7 @@ export function initTurntable() {
   // Frames are fetched as blobs and decoded with createImageBitmap(blob): Chrome decodes those
   // off the main thread (bitmaps made from <img> elements decode/copy on it and caused scroll hitches).
   // At most 4 in flight, so the queue never floods the network or the decoder.
-  const url = (i: number) => `/media/frames/${set}/${String(i + 1).padStart(3, '0')}.webp`;
+  const url = (i: number) => `${import.meta.env.BASE_URL}media/frames/${set}/${String(i + 1).padStart(3, '0')}.webp`;
   const decodeOne = async (i: number): Promise<CanvasImageSource> => {
     if ('createImageBitmap' in window) return createImageBitmap(await (await fetch(url(i))).blob());
     const img = new Image();
