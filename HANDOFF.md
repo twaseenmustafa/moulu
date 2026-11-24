@@ -17,6 +17,6 @@
 - GSAP owns transforms on `.curtain`, `.hero__sofa/.shadow/.word` (xPercent set in JS).
 - Raw Higgsfield PNG/MP4 sources live in `assets-raw/` (git-ignored, not in repo). `site/scripts/optimize.mjs` needs them; optimized media in `site/public/media` IS committed.
 
-**Open items:** connect reservation form to a real backend; real legal text/company details (placeholders in brackets); test Firefox + Safari; brand story/quote/guarantee/returns are placeholders; ruler sits close to last "U" at some desktop widths; Higgsfield budget: 51.25/100 (site) + 4/10 (legal pages) used.
+**Open items:** connect reservation form to a real backend; real legal text/company details (placeholders in brackets); brand story/quote/guarantee/returns are placeholders; Higgsfield budget: 51.25/100 (site) + 4/10 (legal pages) used.
 
 **Credits for Higgsfield MCP:** model gpt_image_2_6 for images, kling3_0 (pro, silent) for video; master sofa job id 9a377c31-cec3-46a5-b2c7-2cf6da7e3bc9 (reference for all sofa images).

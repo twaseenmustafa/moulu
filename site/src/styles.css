@@ -127,7 +127,7 @@ html.no-js .loader { display: none; }
 .hero__hint-line { display: block; width: 1px; height: 30px; background: currentColor; transform-origin: 50% 0; }
 .hero__card { position: absolute; right: var(--gutter); bottom: 24px; z-index: 3; width: 290px; padding: 18px 20px; display: grid; gap: 10px; font-size: 15px; }
 .hero__card .tag--light { background: var(--ink); border: 0; justify-self: start; }
-.hero__ruler { position: absolute; right: calc(var(--gutter) + 8px); top: calc(var(--st) + 40px); z-index: 3; display: grid; justify-items: center; gap: 8px; color: var(--word); transition: color .8s; }
+.hero__ruler { position: absolute; right: calc(var(--gutter) + 8px); top: calc(var(--wt) + var(--ww) * .18 + 20px); z-index: 3; display: grid; justify-items: center; gap: 8px; color: var(--word); transition: color .8s; }
 .hero__ruler i { width: 2px; height: 120px; background: repeating-linear-gradient(currentColor 0 1px, transparent 1px 12px); position: relative; }
 .hero__ruler i::after { content: ''; position: absolute; left: -7px; top: 0; width: 16px; height: 2px; background: var(--accent); transform: translateY(var(--sink, 0px)); }
 .hero__hint { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); z-index: 3; color: var(--word); }
