@@ -82,4 +82,4 @@ Pass 1 → 2 fixes: `[hidden]` overridden by `.success{display:grid}`; sofa not 
 
 ## Pass 12 (2026-11-24): repo + deploy
 - Docs moved to docs/, research to docs/research/. New on-brand README (art in .github/assets, rendered with the site fonts), MIT LICENSE.
-- GitHub Pages workflow; site builds under /moulu/ (BASE env, BASE_URL in TS, relative page links, absolute og/canonical). Verified the /moulu/ build locally: 0 failed requests, 0 console errors, cross-page links + video OK.
+- Live at https://moulu.vercel.app/ (Vercel deploys main). Page links made relative, media paths use BASE_URL, og/canonical absolute. Verified a sub-path build locally: 0 failed requests, 0 console errors, cross-page links + video OK.

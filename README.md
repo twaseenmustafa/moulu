@@ -1,4 +1,4 @@
-<a href="https://twaseenmustafa.github.io/moulu/"><img src=".github/assets/masthead.png" alt="MOULU — furniture you sink into, slowly. 001 Dune, spring 2027." width="100%"></a>
+<a href="https://moulu.vercel.app/"><img src=".github/assets/masthead.png" alt="MOULU — furniture you sink into, slowly. 001 Dune, spring 2027." width="100%"></a>
 
 <h3 align="center">Sink 9 cm. Not further.</h3>
 
@@ -8,10 +8,10 @@ built around one measured feeling: <b>the nine-centimetre sink.</b>
 </p>
 
 <p align="center">
-<a href="https://twaseenmustafa.github.io/moulu/"><img src=".github/assets/btn-visit.png" alt="Visit the Moulu site" height="56"></a>
+<a href="https://moulu.vercel.app/"><img src=".github/assets/btn-visit.png" alt="Visit the Moulu site" height="56"></a>
 </p>
 
-<a href="https://twaseenmustafa.github.io/moulu/"><img src=".github/assets/hero.jpg" alt="Moulu hero: the Dune sofa in Ember bouclé sitting in front of a giant MOULU wordmark, with a sink ruler at 0.0 cm" width="100%"></a>
+<a href="https://moulu.vercel.app/"><img src=".github/assets/hero.jpg" alt="Moulu hero: the Dune sofa in Ember bouclé sitting in front of a giant MOULU wordmark, with a sink ruler at 0.0 cm" width="100%"></a>
 
 <p align="center"><sub>Scroll once, and the sofa sits down. The letters make room. The ruler counts to 9.0.</sub></p>
 
@@ -51,7 +51,7 @@ built around one measured feeling: <b>the nine-centimetre sink.</b>
 </table>
 
 <p align="center">
-<a href="https://twaseenmustafa.github.io/moulu/#reserve"><img src=".github/assets/btn-reserve.png" alt="Reserve a Dune on the site" height="56"></a>
+<a href="https://moulu.vercel.app/#reserve"><img src=".github/assets/btn-reserve.png" alt="Reserve a Dune on the site" height="56"></a>
 </p>
 
 <br>
@@ -85,7 +85,7 @@ npm run dev      # http://localhost:5173
 npm run build    # → site/dist
 ```
 
-Every push to `main` that touches `site/` deploys to GitHub Pages ([workflow](.github/workflows/pages.yml)).
+Every push to `main` deploys to [moulu.vercel.app](https://moulu.vercel.app/) (Vercel, root `site/`).
 
 ```
 moulu/
@@ -103,7 +103,7 @@ moulu/
 │   ├── CREDITS.md        AI image/video credit ledger
 │   ├── HANDOFF.md        start here if you continue the work
 │   └── research/         QA captures, Lighthouse reports, references
-└── .github/              README art + Pages deploy
+└── .github/assets/       README art
 ```
 
 Read in this order: [BRAND](docs/BRAND.md) → [DESIGN](docs/DESIGN.md) → [PROGRESS](docs/PROGRESS.md).
@@ -122,7 +122,7 @@ Read in this order: [BRAND](docs/BRAND.md) → [DESIGN](docs/DESIGN.md) → [PRO
 <br>
 
 <p align="center">
-<a href="https://twaseenmustafa.github.io/moulu/"><img src=".github/assets/btn-visit.png" alt="Visit the Moulu site" height="56"></a>
+<a href="https://moulu.vercel.app/"><img src=".github/assets/btn-visit.png" alt="Visit the Moulu site" height="56"></a>
 <br><br>
 <sub>Built for the long sit.</sub>
 </p>
