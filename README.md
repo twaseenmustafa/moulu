@@ -1,4 +1,4 @@
-<a href="https://moulu.vercel.app/"><img src=".github/assets/sink.webp" alt="The Moulu hero: the Dune sofa sinks 9 cm in front of the MOULU wordmark, then changes from Ember to Chalk to Cocoa" width="100%"></a>
+<a href="https://moulu.vercel.app/"><img src=".github/assets/preview.jpg" alt="MOULU wordmark with the Dune sofa in Ember bouclé sitting in front of it, under a ruler of thin vertical lines" width="100%"></a>
 
 <p align="center"><kbd>001 — DUNE</kbd> &nbsp; <kbd>SINK 9.0 CM</kbd> &nbsp; <kbd>SPRING 2027</kbd></p>
 
