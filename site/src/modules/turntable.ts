@@ -1,12 +1,12 @@
 import { gsap, ScrollTrigger, reduced } from './motion';
 
-const FRAMES = 61;
+const FRAMES = 121; // every source frame: neighbours are 1.5° apart, so the blend never ghosts
 const DEGREES = 180;
 
 /**
  * Scroll-scrubbed turntable on a canvas. Smoothness comes from three things:
- * frames pre-decoded to ImageBitmaps (no decode stalls mid-scroll), a cross-fade
- * between neighbouring frames (no visible stepping), and an eased scrub.
+ * frames pre-decoded to ImageBitmaps (no decode stalls mid-scroll), dense frames
+ * (121 over 180°, nearest drawn), and an eased scrub.
  */
 export function initTurntable() {
   const canvas = document.querySelector<HTMLCanvasElement>('.turn__canvas');
@@ -14,7 +14,10 @@ export function initTurntable() {
   const ctx = canvas.getContext('2d')!;
   const notes = [...document.querySelectorAll<HTMLElement>('.turn__notes li')];
   const deg = document.querySelector<HTMLElement>('[data-deg]')!;
-  const dial = document.querySelector<HTMLElement>('.dial');
+  const needle = document.querySelector<HTMLElement>('.dial__needle');
+  const ticks = document.querySelector<HTMLElement>('.dial__ticks');
+  let span = 0; // needle travel in px, measured on refresh so the per-frame update is transform-only
+  let lastDeg = -1;
   const set = innerWidth < 800 ? 's' : 'l';
   const frames: (CanvasImageSource | undefined)[] = new Array(FRAMES);
   let loading = false;
@@ -30,15 +33,13 @@ export function initTurntable() {
   const draw = (p: number, force = false) => {
     const f = p * (FRAMES - 1);
     if (!force && Math.abs(f - last) < 0.01) return;
-    const i = Math.floor(f), t = f - i;
+    const i = Math.round(f); // nearest frame, no cross-fade: blending neighbours ghosted fast-moving edges
+    if (!force && i === Math.round(last)) { last = f; return; }
     const a = near(i);
     if (!a) return;
     const w = (a as ImageBitmap).width;
     if (canvas.width !== w) { canvas.width = w; canvas.height = (a as ImageBitmap).height; }
-    ctx.globalAlpha = 1;
     ctx.drawImage(a, 0, 0);
-    const b = t > 0.02 ? frames[i + 1] : undefined;
-    if (b) { ctx.globalAlpha = t; ctx.drawImage(b, 0, 0); }
     last = f;
   };
 
@@ -73,10 +74,15 @@ export function initTurntable() {
   const update = (p: number) => {
     progress = p;
     draw(p);
-    deg.textContent = String(Math.round(p * DEGREES));
-    dial?.style.setProperty('--p', p.toFixed(4));
+    const d = Math.round(p * DEGREES);
+    if (d !== lastDeg) { deg.textContent = String(d); lastDeg = d; } // text changes cost layout: only when the number changes
+    if (needle) needle.style.transform = `translate3d(${p * span}px,0,0)`;
     notes.forEach((n) => { const at = +n.dataset.at!; n.classList.toggle('is-on', p >= at && p < at + 0.26); });
   };
+
+  const measure = () => { span = ticks?.clientWidth ?? 0; update(progress); };
+  ScrollTrigger.addEventListener('refresh', measure);
+  measure();
 
   // Preload in idle time once the hero intro has settled; the scroll trigger is a backup for fast scrollers.
   const idle = (cb: () => void) => ('requestIdleCallback' in window ? requestIdleCallback(cb, { timeout: 2000 }) : setTimeout(cb, 200));
@@ -97,8 +103,8 @@ export function initTurntable() {
 
   // The rotation is a tween on a proxy, so scrub's easing smooths the frame index itself.
   const rot = { p: 0 };
-  gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: '.turn', start: 'top top', end: () => `+=${innerHeight * (innerWidth < 800 ? 1.1 : 1.4)}`, pin: '.turn__stage', scrub: 1.2, invalidateOnRefresh: true } })
+  gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: '.turn', start: 'top top', end: () => `+=${innerHeight * (innerWidth < 800 ? 1.1 : 1.4)}`, pin: '.turn__stage', scrub: 0.8, invalidateOnRefresh: true } })
     .fromTo('.turn__canvas-wrap', { scale: 0.92 }, { scale: 1, ease: 'power2.out', duration: 0.12 }, 0)
-    .to(rot, { p: 1, duration: 0.88, ease: 'power1.inOut', onUpdate: () => update(rot.p) }, 0.08)
+    .to(rot, { p: 1, duration: 0.88, onUpdate: () => update(rot.p) }, 0.08) // linear: constant turn speed per scroll px
     .to({}, { duration: 0.04 });
 }

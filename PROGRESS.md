@@ -61,3 +61,8 @@ Pass 1 → 2 fixes: `[hidden]` overridden by `.success{display:grid}`; sofa not 
 - Single trigger unchanged: intro.play() at the loader hand-off (loader edge mid-screen), after content is ready and scroll scenes are built.
 - Fixed: intro is now built after the scroll-scene refresh, which had re-rendered the card/lede/hint at opacity 1 under the loader (flash before reveal).
 - Verified fresh + reload: all elements start in the same 25 ms sample; all hidden under loader, all visible after; reduced motion shows everything with no loader.
+
+## Pass 8 (2026-11-24): turntable + FAQ + full review
+- Turntable: 121 frames (was 61), nearest frame drawn (cross-fade ghosted edges), linear rotation, scrub 0.8, needle moved by transform (was layout-triggering left), degree text only on change. Down/up @1x and @4x: 0 frames >33 ms; @4x down p95 19.9 -> 10.1 ms. Frames 2.8 MB desktop / 1.3 MB mobile, idle-preloaded.
+- FAQ: plus drawn from two centred CSS bars in an outlined ring (was a font glyph, off-centre); hover fill, rotates to x when open; smooth open via ::details-content where supported.
+- Review (desktop/mobile captures, interactions, widths, reduced motion): no new defects; 1px scrollWidth at 360/768 is the clipped hero bleed (no horizontal scroll).

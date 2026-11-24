@@ -172,18 +172,27 @@ html.no-js .turn__notes li { opacity: 1; transform: none; }
 .dial span:nth-of-type(2) { text-align: center; }
 .dial span:nth-of-type(3) { text-align: right; }
 .dial__ticks { grid-column: 1 / -1; height: 16px; margin-bottom: 8px; opacity: .55; background: repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 10px) bottom / 100% 8px no-repeat, repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 25%) bottom / calc(100% + 2px) 16px no-repeat; }
-.dial__needle { position: absolute; left: calc(var(--gutter) + var(--p, 0) * (100% - var(--gutter) * 2)); top: -4px; width: 3px; height: 24px; border-radius: 2px; background: var(--accent); }
+.dial__needle { position: absolute; left: var(--gutter); will-change: transform; top: -4px; width: 3px; height: 24px; border-radius: 2px; background: var(--accent); }
 
 /* ---------- FAQ ---------- */
 .faq { padding-block: var(--section); }
 .faq__grid { display: grid; gap: 40px; align-items: start; }
 .faq details { border-top: 1px solid #1e1d1c33; }
 .faq details:last-child { border-bottom: 1px solid #1e1d1c33; }
-.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 22px 0; font: 650 clamp(19px, 1.6vw, 24px)/1.25 var(--f-display); letter-spacing: -.015em; }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 24px; align-items: center; padding: 24px 0; font: 650 clamp(19px, 1.6vw, 24px)/1.25 var(--f-display); letter-spacing: -.015em; transition: color .3s; }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: '+'; flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--ink); color: var(--cream); font: 500 22px/1 var(--f-text); transition: transform .4s var(--ease-sink); }
-.faq details[open] summary::after { transform: rotate(45deg); }
-.faq details p { padding-bottom: 22px; max-width: 620px; color: var(--cocoa); }
+/* plus drawn from two centred bars (exact centring, unlike a font glyph) inside an outlined ring */
+.faq summary::after { content: ''; flex: none; width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid #1e1d1c40;
+  background: linear-gradient(currentColor, currentColor) center / 14px 1.5px no-repeat, linear-gradient(currentColor, currentColor) center / 1.5px 14px no-repeat;
+  transition: transform .5s var(--ease-sink), background-color .3s, border-color .3s, color .3s; }
+@media (hover: hover) { .faq summary:hover::after { background-color: var(--ink); border-color: var(--ink); color: var(--cream); } }
+.faq details[open] summary::after { transform: rotate(135deg); background-color: var(--ink); border-color: var(--ink); color: var(--cream); }
+.faq summary:focus-visible { outline-offset: 6px; }
+/* smooth open/close where supported (Chrome 131+); elsewhere it simply toggles */
+:root { interpolate-size: allow-keywords; }
+.faq details::details-content { block-size: 0; overflow: hidden; transition: block-size .5s var(--ease-sink), content-visibility .5s allow-discrete; }
+.faq details[open]::details-content { block-size: auto; }
+.faq details p { padding: 0 64px 26px 0; max-width: 680px; color: var(--cocoa); }
 @media (min-width: 900px) { .faq__grid { grid-template-columns: 1fr 1.4fr; } }
 
 /* ---------- Craft ---------- */
